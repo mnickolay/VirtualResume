@@ -10,10 +10,10 @@ navCircle2.addEventListener("click", function(){
 
 navCircle3.addEventListener("click", function(){
     if(!this.classList.contains("navActive"))
-        pageScrollNavClick(green, "about", this);
+        pageScrollNavClick(pink, "about", this);
 });
 
 navCircle4.addEventListener("click", function(){
     if(!this.classList.contains("navActive"))
-        pageScrollNavClick(pink, "contact", this);
+        pageScrollNavClick(green, "contact", this);
 });

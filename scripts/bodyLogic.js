@@ -3,7 +3,7 @@ function pageScrollNavClick(clr, pg, cir){
     page = pg;
     removeActive();
     addActive(cir);
-    appendBody(pg);
+    findLogicSwitch();
 }
 
 function addActive(cir){
@@ -17,6 +17,46 @@ function removeActive(){
     });
 };
 
-function appendBody(newPage) {
-    page = newPage;
+function findLogicSwitch() {
+    switch(page){
+        case "home":
+            removeLogic();
+            homeLogic();
+            break;
+        case "resume":
+            removeLogic();
+            resumeLogic();
+            break;
+        case "about":
+            removeLogic();
+            aboutLogic();
+            break;
+        case "contact":
+            removeLogic();
+            contactLogic();
+            break;
+    }
 };
+
+function removeLogic(){
+    bodyL.innerHTML = "";
+    bodyR.innerHTML = "";
+    htmlFill.innerHTML = "";
+}
+
+function homeLogic(){
+    
+}
+
+function resumeLogic(){
+    
+}
+
+function aboutLogic(){
+    bodyL.innerHTML = aboutDesign;
+    aboutCircleCreation();
+}
+
+function contactLogic(){
+    
+}

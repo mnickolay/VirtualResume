@@ -1,4 +1,5 @@
-//window
+//page
+var html = document.querySelector("html");
 var width = window.innerWidth;
 var height = window.innerHeight;
 
@@ -23,8 +24,24 @@ const pink = "#ffb6bd";
 
 //body
 var bodyR = document.querySelector(".bodyRight");
+var bodyL = document.querySelector(".bodyLeft");
 var htmlFill = document.querySelector("#htmlFill");
 
 //logo
 var logoMain = $(".logoMain"),
     borderString = "";
+
+//html
+const homeHTML = '';
+const resumeHTML = '';
+const aboutHTML = '';
+const contactHTML = '';
+
+//design
+const homeDesign = '';
+const resumeDesign = '';
+const aboutDesign = '<svg height="100vh" width="100vw" id="svgCircles"></svg>';
+const contactDesign = '';
+
+//about
+var svgCircles;

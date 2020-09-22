@@ -9,11 +9,11 @@ $(window).bind('mousewheel', function(event) {
 });
 
 function scrollUp(){
-    if(checkScrolltimer()) findSwitch("up");
+    if(checkScrolltimer()) findScrollSwitch("up");
 };
 
 function scrollDown(){
-    if(checkScrolltimer()) findSwitch("down");
+    if(checkScrolltimer()) findScrollSwitch("down");
 };
 
 function checkScrolltimer(){
@@ -25,7 +25,7 @@ function resetScroll(){
     scrollTimeoutStart = new Date().getTime()/1000;
 }
 
-function findSwitch(scroll){
+function findScrollSwitch(scroll){
     switch(page){
         case "home":
             if(scroll=="down"){
@@ -37,19 +37,19 @@ function findSwitch(scroll){
             if(scroll=="up")
                 pageScrollNavClick(blue, "home", navCircle1);
             else
-                pageScrollNavClick(green, "about", navCircle3);
+                pageScrollNavClick(pink, "about", navCircle3);
             resetScroll();
             break;
         case "about":
             if(scroll=="up")
                 pageScrollNavClick(yellow, "resume", navCircle2);
             else
-                pageScrollNavClick(pink, "contact", navCircle4);
+                pageScrollNavClick(green, "contact", navCircle4);
             resetScroll();
             break;
         case "contact":
             if(scroll=="up"){
-                pageScrollNavClick(green, "about", navCircle3);
+                pageScrollNavClick(pink, "about", navCircle3);
                 resetScroll();
             };
             break;

@@ -12,6 +12,7 @@
     width: 50%;
     height: 100%;
     background-color: #f0f0f0;
+    transition: all 1s ease;
 }
 
 .bodyRight{
@@ -19,5 +20,5 @@
     width: 50%;
     height: 100%;
     background-color: blue;
-    transition: background-color 1s ease;
+    transition: all 1s ease;
 }

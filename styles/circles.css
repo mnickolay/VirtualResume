@@ -1,0 +1,9 @@
+.circle{
+    fill: rgba(255,13,35,0.3);
+    animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}

@@ -3,6 +3,7 @@ html, body{
     max-height: 100%;
     padding: 0;
     margin: 0;
+    font-family: "font300";
 }
 
 @font-face{

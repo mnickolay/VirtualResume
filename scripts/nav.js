@@ -1,49 +1,23 @@
-var navLogoMain = $(".navLogoMain"),
-    borderStringMain = "";
+navCircle1.addEventListener("click", function(){
+    color = "#0000ff";
+    current = "home";
+    bodyR.style.backgroundColor = color;
+})
 
-setInterval(function(){
-    cssBorderRadius(navLogoMain);
-}, 300);
+navCircle2.addEventListener("click", function(){
+    color = "#d1a212";
+    current = "resume";
+    bodyR.style.backgroundColor = color;
+})
 
-// navItemsArr.forEach(function(ele){
-//     navStyling(ele);
-// })
+navCircle3.addEventListener("click", function(){
+    color = "#14b58a";
+    current = "about";
+    bodyR.style.backgroundColor = color;
+})
 
-function navStyling(ele){
-    ele.mouseenter(function(){
-        eleInterval(ele);
-    });
-    if(!active){
-        ele.mouseleave(function(){
-            clearInterval(interval);
-            resetBorder(ele);
-        })
-    }
-}
-
-function eleInterval(ele){
-    interval = setInterval(function(){
-        cssBorderRadius(ele);
-    }, 500)
-}
-
-function resetBorder(ele){
-    ele.css("border-radius", "5px")
-}
-
-function cssBorderRadius(ele){
-    for(var i=0; i<4; i++){
-        borderStringMain+=valueFinder() + " ";
-    }
-    ele.css("border-radius", borderStringMain);
-    borderStringMain="";
-}
-
-function valueFinder(){
-    if(rng()) return "40px"
-    else return "10px"
-}
-
-function rng(){
-    return Math.round(Math.random());
-}
+navCircle4.addEventListener("click", function(){
+    color = "#ffb6bd";
+    current = "contact";
+    bodyR.style.backgroundColor = color;
+})

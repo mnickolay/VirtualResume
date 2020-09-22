@@ -7,31 +7,44 @@
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
           integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
           crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="styles/logo.css">
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/body.css">
+    <link rel="stylesheet" href="styles/nav.css">
     <script src="scripts/jquery.js"></script>
 </head>
 <body>
 
 <span id="colorStorage" style="display: none;">#0f6336</span>
 
-<div class="navDiv">
-    <div class="navMaster">
-        <div class="navLeft">
-            <a class="navLogoMain">MN</a>
-        </div>
+<div class="logoDiv">
+    <div class="logoParent">
+        <a class="logoMain">MN</a>
     </div>
 </div>
 
 <div class="websiteBody">
     <div class="bodyLeft"></div>
     <div class="bodyRight"></div>
-    <div class="bodyNav"></div>
+
+    <span class="navCircle" id="navCircle1">
+        <span class="navText" id="navHome">Home</span>
+    </span>
+    <span class="navCircle" id="navCircle2">
+        <span class="navText" id="navResume">Resume</span>
+    </span>
+    <span class="navCircle" id="navCircle3">
+        <span class="navText" id="navAbout">About</span>
+    </span>
+    <span class="navCircle" id="navCircle4">
+        <span class="navText" id="navContact">Contact</span>
+    </span>
+
 </div>
 
-<script src="scripts/nav.js"></script>
+<script src="scripts/var.js"></script>
+<script src="scripts/logo.js"></script>
 <script src="scripts/scroll.js"></script>
-
+<script src="scripts/nav.js"></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 logoMain.mouseenter(function(){
-    logoMain.css("backgroundColor", color)
-    logoMain.css("borderColor", color)
+    logoMain.css("backgroundColor", currentColor)
+    logoMain.css("borderColor", currentColor)
 });
 
 logoMain.mouseleave(function(){

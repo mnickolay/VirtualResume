@@ -1,15 +1,9 @@
-/* .bodyNav{
-    float: right;
-    width: 50px;
-    height: 100%;
-    background-color: blue;
-} */
-
 .navCircle{
     height: 35px;
     width: 35px;
     border-radius: 50px;
     border: 2px solid #f0f0f0;
+    color: #f0f0f0;
     background-color: transparent;
     position: absolute;
     transition: all 0.2s ease,
@@ -39,17 +33,14 @@
     right: 0vw;
 }
 
-
 /* hovering */
 
 .navCircle:hover{
     width: 100px;
-    color: #f0f0f0;
 }
 
 #navCircle1:hover{
     background-color: #0000FF;
-    color: #f0f0f0;
 }
 
 #navCircle2:hover{
@@ -69,12 +60,11 @@
 #navCircle3:hover #navAbout,
 #navCircle4:hover #navContact{
     display: inline;
-    text-align: center;
     line-height: 2rem;
     padding-right: 10px;
 }
 
-/* blue #0000FF */
-/* yellow #FFBF00 */
-/* green #00FF80 */
-/* pink #FFE5E2 */
+.navActive, .navActive:hover{
+    background-color: #f0f0f0 !important;
+    color: black !important;
+}

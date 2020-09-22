@@ -12,13 +12,18 @@ var navCircle1 = document.querySelector("#navCircle1"),
     navCircle2 = document.querySelector("#navCircle2"),
     navCircle3 = document.querySelector("#navCircle3"),
     navCircle4 = document.querySelector("#navCircle4");
+var navCircleArr = [navCircle1,navCircle2,navCircle3,navCircle4];
 
 //colors
-var color = "#0000ff";
+var currentColor = "#0000ff";
+const blue = "#0000ff";
+const yellow = "#d1a212";
+const green = "#12bb8e";
+const pink = "#ffb6bd";
 
 //body
 var bodyR = document.querySelector(".bodyRight");
-    
+var htmlFill = document.querySelector("#htmlFill");
 
 //logo
 var logoMain = $(".logoMain"),

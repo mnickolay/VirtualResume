@@ -21,11 +21,11 @@ function findLogicSwitch() {
     switch(page){
         case "home":
             removeLogic();
-            homeLogic();
+            setTimeout(homeLogic(), 1000);
             break;
         case "resume":
             removeLogic();
-            resumeLogic();
+            setTimeout(resumeLogic(), 1000);
             break;
         case "about":
             removeLogic();
@@ -33,30 +33,24 @@ function findLogicSwitch() {
             break;
         case "contact":
             removeLogic();
-            contactLogic();
+            setTimeout(contactLogic(), 1000);
             break;
     }
 };
 
 function removeLogic(){
-    bodyL.innerHTML = "";
-    bodyR.innerHTML = "";
-    htmlFill.innerHTML = "";
+    if(leavingAboutNext){
+        leavingAboutNext = false;
+        svgCircles.style.opacity = 0;
+        setTimeout(function(){
+            setNewBodyFaders()
+        }, 500);
+    }else{
+        setNewBodyFaders();
+    }
 }
 
-function homeLogic(){
-    
-}
-
-function resumeLogic(){
-    
-}
-
-function aboutLogic(){
-    bodyL.innerHTML = aboutDesign;
-    aboutCircleCreation();
-}
-
-function contactLogic(){
-    
+function setNewBodyFaders(){
+    bodyL.innerHTML = leftHTML;
+    bodyR.innerHTML = rightHTML;
 }

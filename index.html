@@ -7,11 +7,19 @@
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
           integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
           crossorigin="anonymous">
+          
+    <!-- styling -->
     <link rel="stylesheet" href="styles/logo.css">
-    <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/body.css">
     <link rel="stylesheet" href="styles/nav.css">
     <link rel="stylesheet" href="styles/circles.css">
+
+    <!-- pages -->
+    <link rel="stylesheet" href="styles/pages/home.css">
+    <link rel="stylesheet" href="styles/pages/resume.css">
+    <link rel="stylesheet" href="styles/pages/about.css">
+    <link rel="stylesheet" href="styles/pages/contact.css">
+    
     <script src="scripts/jquery.js"></script>
 </head>
 <body>
@@ -25,11 +33,26 @@
 </div>
 
 <div class="websiteBody">
-    <div class="bodyLeft"></div>
-    <div class="bodyRight"></div>
+    <!-- body -->
+    <div class="bodyLeft">
+        <div class="leftHTML"></div>
+    </div>
+    <div class="bodyRight">
+        <div class="rightHTML">
+            <div class="homeDiv">
+                <div class="nameDisplay container">
+                    <div class="nameDisplayFirst">Matthew</div>
+                    <div class="nameDisplaySecond">Nickolay</div>
+                </div>
+                <div class="infoDisplay container">
+                    <div class="infoWebDisplay">&lt;Web Development&gt;</div>
+                    <div class="infoProgrammingDisplay">//Programming</div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <span id="htmlFill"></span>
-
+    <!-- nav -->
     <span class="navCircle navActive" id="navCircle1">
         <span class="navText" id="navHome">Home</span>
     </span>
@@ -49,7 +72,11 @@
 <script src="scripts/logo.js"></script>
 <script src="scripts/scroll.js"></script>
 <script src="scripts/nav.js"></script>
-<script src="scripts/bodyLogic.js"></script>
+<script src="scripts/logic/logicMain.js"></script>
+<script src="scripts/logic/logicHome.js"></script>
+<script src="scripts/logic/logicResume.js"></script>
+<script src="scripts/logic/logicAbout.js"></script>
+<script src="scripts/logic/logicContact.js"></script>
 <script src="scripts/circles.js"></script>
 </body>
 </html>

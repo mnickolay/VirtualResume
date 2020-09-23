@@ -18,7 +18,7 @@ function scrollDown(){
 
 function checkScrolltimer(){
     scrollTimeoutEnd = new Date().getTime()/1000;
-    if((scrollTimeoutEnd - 0.4) > scrollTimeoutStart) return true;
+    if((scrollTimeoutEnd - 0.5) > scrollTimeoutStart) return true;
 };
 
 function resetScroll(){

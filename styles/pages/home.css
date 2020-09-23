@@ -1,0 +1,34 @@
+.homeDiv{
+    margin-left: 1vw;
+}
+
+.nameDisplay{
+    float: initial;
+    text-align: left;
+    line-height: 0.8;
+    font-family: 'DMSerif';
+    font-size: 8vw;
+    padding-top: 30vh;
+    padding-left: 0;
+    animation: slideUpName ease 1s;
+    color: #F0F0F0;
+}
+
+.infoDisplay{
+    font-size: 2.1vw;
+    font-family: 'DMSerif';
+    padding-top: 6vh;
+    padding-left: 0;
+    animation: slideUpInfo ease 1s;
+    color: #F0F0F0;
+}
+
+@keyframes slideUpName{
+    0% {padding-top: 33vh; opacity: 0;}
+    100% {padding-top: 30vh; opacity: 1;}
+}
+
+@keyframes slideUpInfo{
+    0% {padding-top: 7vh; opacity: 0;}
+    100% {padding-top: 6vh; opacity: 1;}
+}

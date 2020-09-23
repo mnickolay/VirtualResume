@@ -16,9 +16,27 @@
 }
 
 .bodyRight{
-    display: inline-block;
+    float: right;
     width: 50%;
     height: 100%;
-    background-color: blue;
+    background-color: #0534cf;
     transition: all 1s ease;
+}
+
+html, body{
+    min-height: 100%;
+    max-height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: "Raleway";
+}
+
+@font-face{
+    font-family: 'Raleway';
+    src: url(../fonts/300Raleway-VariableFont_wght.ttf);
+}
+
+@font-face{
+    font-family: 'DMSerif';
+    src: url(../fonts/DMSerifText-Regular.ttf);
 }

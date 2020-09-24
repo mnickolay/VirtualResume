@@ -1,0 +1,76 @@
+/* right */
+
+.resumeDiv{
+    position: absolute;
+    top: 1vh;
+    left: 52vw;
+    margin-right: 5vw;
+    margin-top: 8rem;
+}
+
+.resHeader{
+    margin-bottom: 0;
+    animation: h4slideLeft 1s ease;
+}
+
+.resH5{
+    font-weight: 300;
+    margin: 15px 0vw;
+    animation: h5slideLeft 1s ease;
+}
+
+.resPushRight{
+    margin: 20px 2.5vw;
+}
+
+/* left */
+
+.resumeBox{
+    width: 25vw;
+    height: 25vw;
+    max-width: 600px;
+    max-height: 600px;
+    position: absolute;
+    left: 12.5vw;
+    top: 225px;
+    padding: 5px;
+    box-shadow: 0 0 0 10px #f0f0f0,
+                0 0 0 11px black;
+    background-color: #d1a212;
+    animation: borderDisplay 2s ease,
+                fadeIn 1s linear;
+}
+
+@keyframes h5slideLeft{
+    0% {margin-left: 3vw; opacity: 0;}
+    100% {margin-left: 0vw; opacity: 1;}
+}
+
+@keyframes h4slideLeft{
+    0% {margin-left: 2vw; opacity: 0;}
+    100% {margin-left: 0vw; opacity: 1;}
+}
+
+@keyframes fadeIn{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes borderDisplay{
+    0% {box-shadow: 0 0 0 0px #f0f0f0,
+                    0 0 0 0px black,
+                    0 0 0 0px #d1a212}
+
+    25% {box-shadow: 0 0 0 0px #f0f0f0,
+                    0 0 0 0px black,
+                    0 0 0 10px #d1a212}
+                    
+    50% {box-shadow: 0 0 0 0px #f0f0f0,
+                    0 0 0 11px black,
+                    0 0 0 10px #d1a212}
+
+    100% {box-shadow:
+                    0 0 0 10px #f0f0f0,
+                    0 0 0 11px black,
+                    0 0 0 0px #d1a212}
+}

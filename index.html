@@ -24,8 +24,6 @@
 </head>
 <body>
 
-<span id="colorStorage" style="display: none;">#0f6336</span>
-
 <div class="logoDiv">
     <div class="logoParent">
         <a class="logoMain">MN</a>
@@ -35,7 +33,9 @@
 <div class="websiteBody">
     <!-- body -->
     <div class="bodyLeft">
-        <div class="leftHTML"></div>
+        <div class="leftHTML">
+            
+        </div>
     </div>
     <div class="bodyRight">
         <div class="rightHTML">
@@ -54,29 +54,44 @@
 
     <!-- nav -->
     <span class="navCircle navActive" id="navCircle1">
-        <span class="navText" id="navHome">Home</span>
+        <span class="navText" id="navHome"></span>
     </span>
     <span class="navCircle" id="navCircle2">
-        <span class="navText" id="navResume">Resume</span>
+        <span class="navText" id="navResume"></span>
     </span>
     <span class="navCircle" id="navCircle3">
-        <span class="navText" id="navAbout">About</span>
+        <span class="navText" id="navAbout"></span>
     </span>
     <span class="navCircle" id="navCircle4">
-        <span class="navText" id="navContact">Contact</span>
+        <span class="navText" id="navContact"></span>
     </span>
 
 </div>
 
+<!-- general scripts -->
 <script src="scripts/var.js"></script>
 <script src="scripts/logo.js"></script>
 <script src="scripts/scroll.js"></script>
 <script src="scripts/nav.js"></script>
+<script src="scripts/circles.js"></script>
+
+<!-- logic scripts -->
 <script src="scripts/logic/logicMain.js"></script>
 <script src="scripts/logic/logicHome.js"></script>
 <script src="scripts/logic/logicResume.js"></script>
 <script src="scripts/logic/logicAbout.js"></script>
 <script src="scripts/logic/logicContact.js"></script>
-<script src="scripts/circles.js"></script>
+
+<!-- html scripts -->
+<script src="scripts/html/homeHTML.js"></script>
+<script src="scripts/html/resumeHTML.js"></script>
+<script src="scripts/html/aboutHTML.js"></script>
+<script src="scripts/html/contactHTML.js"></script>
+
+<!-- design scripts -->
+<script src="scripts/design/homeDesign.js"></script>
+<script src="scripts/design/resumeDesign.js"></script>
+<script src="scripts/design/aboutDesign.js"></script>
+<script src="scripts/design/contactDesign.js"></script>
 </body>
 </html>

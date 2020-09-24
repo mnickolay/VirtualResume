@@ -9,28 +9,37 @@
     transition: all 0.2s ease,
                 background-color 0.4s ease;
     right: 2vw;
+    bottom: 20vw;
 }
 
 #navCircle1{
-    top: 350px;
+    margin-bottom: 150px;
 }
 
 #navCircle2{
-    top: 410px;
+    margin-bottom: 100px;
 }
 
 #navCircle3{
-    top: 470px;
+    margin-bottom: 50px;
+
 }
 
 #navCircle4{
-    top: 530px;
+    
 }
 
 .navText{
     position: absolute;
     display: none;
     right: 0vw;
+    font-family: "Raleway";
+}
+
+.navActive .navText{
+    display: inline;
+    line-height: 2rem;
+    padding-right: 10px;
 }
 
 /* hovering */

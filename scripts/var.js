@@ -28,27 +28,16 @@ const pink = "#ffb6bd";
 //body
 var bodyR = document.querySelector(".bodyRight");
 var bodyL = document.querySelector(".bodyLeft");
-var bodyRFader = document.querySelector(".rightFader");
-var bodyLFader = document.querySelector(".leftFader");
-var htmlFill = document.querySelector("#htmlFill");
+var rightHTML = document.querySelector(".rightHTML");
+var leftHTML = document.querySelector(".leftHTML");
 
 //logo
 var logoMain = $(".logoMain"),
     borderString = "";
 
 //html
-const homeHTML = '<div class="nameDisplay container"> <div class="nameDisplayFirst">Matthew</div> <div class="nameDisplaySecond">Nickolay</div> </div> <div class="infoDisplay container"> <div class="infoWebDisplay">&lt;Web Development&gt;</div> <div class="infoProgrammingDisplay">//Programming</div> </div>';
-const resumeHTML = '';
-const aboutHTML = '';
-const contactHTML = '';
-const leftHTML = '<div class="leftHTML"></div>';
-const rightHTML = '<div class="rightHTML"></div>';
-
-//design
-const homeDesign = '';
-const resumeDesign = '';
-const aboutDesign = '<svg height="100vh" width="100vw" id="svgCircles"></svg>';
-const contactDesign = '';
+const leftHTMLstr = '<div class="leftHTML"></div>';
+const rightHTMLstr = '<div class="rightHTML"></div>';
 
 //about
 var svgCircles;

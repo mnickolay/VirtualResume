@@ -1,3 +1,3 @@
 function homeLogic(){
-    bodyR.innerHTML = homeHTML;
+    rightHTML.innerHTML = homeHTML;
 }

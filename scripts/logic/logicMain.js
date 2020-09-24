@@ -21,11 +21,11 @@ function findLogicSwitch() {
     switch(page){
         case "home":
             removeLogic();
-            setTimeout(homeLogic(), 1000);
+            homeLogic();
             break;
         case "resume":
             removeLogic();
-            setTimeout(resumeLogic(), 1000);
+            resumeLogic();
             break;
         case "about":
             removeLogic();
@@ -33,24 +33,29 @@ function findLogicSwitch() {
             break;
         case "contact":
             removeLogic();
-            setTimeout(contactLogic(), 1000);
+            contactLogic();
             break;
     }
 };
 
 function removeLogic(){
-    if(leavingAboutNext){
-        leavingAboutNext = false;
-        svgCircles.style.opacity = 0;
-        setTimeout(function(){
-            setNewBodyFaders()
-        }, 500);
-    }else{
-        setNewBodyFaders();
-    }
+    // if(leavingAboutNext){
+    //     leavingAboutNext = false;
+    //     svgCircles.style.opacity = 0;
+    //     setTimeout(function(){
+    //         bodyL.innerHTML = leftHTMLstr;
+    //     }, 500);
+    //     bodyR.innerHTML = rightHTMLstr;
+    // }else{
+    //     bodyL.innerHTML = leftHTMLstr;
+    //     bodyR.innerHTML = rightHTMLstr;
+    // }
+    bodyL.innerHTML = leftHTMLstr;
+    bodyR.innerHTML = rightHTMLstr;
+    resetRLHTML();
 }
 
-function setNewBodyFaders(){
-    bodyL.innerHTML = leftHTML;
-    bodyR.innerHTML = rightHTML;
+function resetRLHTML(){
+    rightHTML = document.querySelector(".rightHTML");
+    leftHTML = document.querySelector(".leftHTML");
 }

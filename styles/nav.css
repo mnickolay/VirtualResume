@@ -8,8 +8,8 @@
     position: absolute;
     transition: all 0.2s ease,
                 background-color 0.4s ease;
-    right: 2vw;
-    bottom: 20vw;
+    right: 20px;
+    bottom: 20px;
 }
 
 #navCircle1{

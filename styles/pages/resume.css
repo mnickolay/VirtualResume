@@ -56,12 +56,14 @@
 }
 
 .resumeBoxHead{
+    margin: 0.25vw;
     font-size: 2rem;
     font-weight: 600;
     
 }
 
 .resumeBoxBody{
+    margin: 0.5vw;
     font-size: 1.5rem;
 }
 

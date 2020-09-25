@@ -42,3 +42,17 @@ const rightHTMLstr = '<div class="rightHTML"></div>';
 //about
 var svgCircles;
 var leavingAboutNext = false;
+
+//resume
+var langHead = document.querySelector(".langHead");
+var lafHead = document.querySelector(".lafHead");
+var environmentHead = document.querySelector(".environmentHead");
+var generalHead = document.querySelector(".generalHead");
+var SWGHead = document.querySelector(".SWGHead");
+var WDBHead = document.querySelector(".WDBHead");
+var DCTHead = document.querySelector(".DCTHead");
+var instacartHead = document.querySelector(".instacartHead");
+var synergyHead = document.querySelector(".synergyHead");
+var gilbertHead = document.querySelector(".gilbertHead");
+var mmcHead = document.querySelector(".mmcHead");
+var salutHead = document.querySelector(".salutHead");

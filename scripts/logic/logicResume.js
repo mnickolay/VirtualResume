@@ -1,5 +1,3 @@
-//this.parentElement.nextSibling.nextSibling.children[0].children
-
 function resumeLogic(){
     leftHTML.innerHTML = resumeDesign;
     rightHTML.innerHTML = resumeHTML;
@@ -32,6 +30,7 @@ function resumeLogic(){
                     thisResumeHTML = "";
                 }
                 resumeBoxHead.innerHTML = this.innerText
+                console.log(resumeObj.work.instacart.workDate)
             })
     
             item.addEventListener("mouseleave", function(){
@@ -40,8 +39,4 @@ function resumeLogic(){
             })
         })
     })
-    
-
-
-    
 }

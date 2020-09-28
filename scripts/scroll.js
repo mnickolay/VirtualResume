@@ -4,28 +4,9 @@ $(window).resize(function(){
 });
 
 $(window).bind('mousewheel', function(event) {
-    if (event.originalEvent.wheelDelta >= 0) scrollUp();
-    else scrollDown();
+    if (event.originalEvent.wheelDelta >= 0) findScrollSwitch("up");
+    else findScrollSwitch("down")
 });
-
-function scrollUp(){
-    // if(checkScrolltimer()) findScrollSwitch("up");
-    findScrollSwitch("up")
-};
-
-function scrollDown(){
-    // if(checkScrolltimer()) findScrollSwitch("down");
-    findScrollSwitch("down")
-};
-
-function checkScrolltimer(){
-    scrollTimeoutEnd = new Date().getTime()/1000;
-    if((scrollTimeoutEnd - 0.5) > scrollTimeoutStart) return true;
-};
-
-function resetScroll(){
-    scrollTimeoutStart = new Date().getTime()/1000;
-}
 
 function findScrollSwitch(scroll){
     switch(page){

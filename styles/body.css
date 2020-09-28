@@ -1,3 +1,11 @@
+html, body{
+    min-height: 100%;
+    max-height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: "Raleway";
+}
+
 .websiteBody{
     position: absolute;
     top: 0;
@@ -21,14 +29,6 @@
     height: 100%;
     background-color: #0534cf;
     transition: all 1s ease;
-}
-
-html, body{
-    min-height: 100%;
-    max-height: 100%;
-    padding: 0;
-    margin: 0;
-    font-family: "Raleway";
 }
 
 @font-face{

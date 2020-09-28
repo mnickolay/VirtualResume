@@ -47,4 +47,3 @@ var leavingAboutNext = false;
 var skillsObj;
 var educationObj;
 var workObj;
-var resumeObj;

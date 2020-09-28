@@ -27,7 +27,6 @@ function objAddEventListeners(obj){
         resTHead.innerHTML = objSettingTableHeader(obj);
         
         var tableBodyFill = "<tr>";
-        // tableBodyFill += objSettingTableFillDate(obj);
         tableBodyFill += objSettingTableFillArr(obj);
         tableBodyFill += '</tr>';
         resTBody.innerHTML += tableBodyFill;
@@ -94,13 +93,20 @@ function setResumeVariables(){
             ele: document.querySelector(".SWGHead"),
             date: '01/2020 - 04/2020',
             arr: [
-                ''
+                'Intensive and challenging, The Software Guild has students coding 60 hours a week to develop full-stack  programming abilities.',
+                'Developed a C# banking software that saves customer account information with three different account types,  each with varying rulesets. Required dependency injection, interfaces, and three layers with models.',
+                'Built a  software program in Visual Studio that took in and saved order information for a flooring company to unique  file locations depending on the order date. Implemented an SQL Server to store data and write to the program.',
+                'Designed a website for a restaurant and for a virtual vending machine that used an online server with applicable  items. Both were designed with and used an extensive amount of CSS, Bootstrap, and JavaScript.',
+                'Utilized and became proficient with GitHub, SQL Server Mgmt Studio, and IDEs.'
             ]
         },
         WDB: {
             ele: document.querySelector(".WDBHead"),
             date: '05/2020 - Current',
             arr: [
+                '',
+                '',
+                '',
                 ''
             ]
         },
@@ -108,6 +114,9 @@ function setResumeVariables(){
             ele: document.querySelector(".DCTHead"),
             date: '08/2017 - 05/2019',
             arr: [
+                '',
+                '',
+                '',
                 ''
             ]
         }
@@ -117,6 +126,9 @@ function setResumeVariables(){
             ele: document.querySelector(".instacartHead"),
             date: '06/2020 - Current',
             arr: [
+                '',
+                '',
+                '',
                 ''
             ]
         },
@@ -124,6 +136,9 @@ function setResumeVariables(){
             ele: document.querySelector(".synergyHead"),
             date: '08/2019 - 01/2020',
             arr: [
+                '',
+                '',
+                '',
                 ''
             ]
         },
@@ -131,6 +146,9 @@ function setResumeVariables(){
             ele: document.querySelector(".gilbertHead"),
             date: '05/2019 - 08/2020',
             arr: [
+                '',
+                '',
+                '',
                 ''
             ]
         },
@@ -138,6 +156,9 @@ function setResumeVariables(){
             ele: document.querySelector(".mmcHead"),
             date: '05/2018 - 08/2020',
             arr: [
+                '',
+                '',
+                '',
                 ''
             ]
         },
@@ -145,13 +166,11 @@ function setResumeVariables(){
             ele: document.querySelector(".salutHead"),
             date: '05/2016 - 11/2019',
             arr: [
+                '',
+                '',
+                '',
                 ''
             ]
         }
-    };
-    resumeObj = {
-        skills: skillsObj,
-        education: educationObj,
-        work: workObj
     };
 };

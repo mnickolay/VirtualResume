@@ -44,59 +44,7 @@ var svgCircles;
 var leavingAboutNext = false;
 
 //resume
-var skillsObj = {
-    langArr: ['C#', 'JavaScript', 'HTML/CSS', 'JSON', 'XML', 'SQL', 'noSQL'],
-    lafArr: ['.NET Core', 'jQuery', 'MVC', 'ASP.NET', 'Razor Pages', 'Node.js',
-             'Express', 'APIs', 'Bootstrap', 'Entity Framework', 'Dapper ORM', 'NUnit'],
-    environmentsArr: ['Visual Studio', 'Sublime', 'Command Prompt',
-                      'Git Bash', 'MongoDB', 'SQL Server Management Studio'],
-    generalArr: ['Full Stack Developement', 'Object Orientation', 'Generics',
-                  'Server Side Validation', 'REST', 'Testing']
-};
-var educationObj = {
-    TSG: {
-        eduDate: '01/2020 - 04/2020',
-        eduDescriptionArr: [
-            ''
-        ]
-    },
-    WDB: {
-        eduDate: '05/2020 - Current',
-        eduDescriptionArr: [
-            ''
-        ]
-    },
-    DCT: {
-        eduDate: '08/2017 - 05/2019',
-        eduDescriptionArr: [
-            ''
-        ]
-    }
-};
-var workObj = {
-    instacart: {
-        workDate: '06/2020 - Current',
-        workDescription: ''
-    },
-    synergy: {
-        workDate: '08/2019 - 01/2020',
-        workDescription: ''
-    },
-    gilbert: {
-        workDate: '05/2019 - 08/2020',
-        workDescription: ''
-    },
-    mmc: {
-        workDate: '05/2018 - 08/2020',
-        workDescription: ''
-    },
-    salut: {
-        workDate: '05/2016 - 11/2019',
-        workDescription: ''
-    }
-};
-const resumeObj = {
-    skills: skillsObj,
-    education: educationObj,
-    work: workObj
-};
+var skillsObj;
+var educationObj;
+var workObj;
+var resumeObj;

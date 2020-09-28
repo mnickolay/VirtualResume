@@ -50,12 +50,12 @@ function removeLogic(){
     //     bodyL.innerHTML = leftHTMLstr;
     //     bodyR.innerHTML = rightHTMLstr;
     // }
-    bodyL.innerHTML = leftHTMLstr;
-    bodyR.innerHTML = rightHTMLstr;
     resetRLHTML();
 }
 
 function resetRLHTML(){
+    bodyL.innerHTML = leftHTMLstr;
+    bodyR.innerHTML = rightHTMLstr;
     rightHTML = document.querySelector(".rightHTML");
     leftHTML = document.querySelector(".leftHTML");
 }

@@ -39,7 +39,7 @@
     /* min-width: 270px;
     min-height: 270px; */
     width: 30vw;
-    height: 30vw;
+    height: 60vh;
     max-width: 600px;
     max-height: 600px;
     position: absolute;
@@ -57,27 +57,20 @@
     display: none;
 }
 
-.resumeBoxHead{
-    margin: 0.25vw;
-    font-size: 2vw;
-    font-weight: 600;
-    
-}
-
-.resumeBoxBody{
+table{
     margin: 0.5vw;
 }
 
-.boxBodyItem{
-    font-size: 1vw;
+th{
+    width: 30vw;
 }
 
-.boxBodyItemLeft{
-    float: left;
+tbody tr:nth-child(even) {
+    background-color: #c79809;
 }
 
-.boxBodyItemRight{
-    float: right;
+#thDate{
+    text-align: right;
 }
 
 @keyframes h5slideLeft{

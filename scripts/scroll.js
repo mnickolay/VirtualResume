@@ -9,11 +9,13 @@ $(window).bind('mousewheel', function(event) {
 });
 
 function scrollUp(){
-    if(checkScrolltimer()) findScrollSwitch("up");
+    // if(checkScrolltimer()) findScrollSwitch("up");
+    findScrollSwitch("up")
 };
 
 function scrollDown(){
-    if(checkScrolltimer()) findScrollSwitch("down");
+    // if(checkScrolltimer()) findScrollSwitch("down");
+    findScrollSwitch("down")
 };
 
 function checkScrolltimer(){

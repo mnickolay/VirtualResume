@@ -24,7 +24,7 @@
     color: #F0F0F0;
 }
 
-@keyframes slideUpName{
+/* @keyframes slideUpName{
     0% {padding-top: 33vh; opacity: 0;}
     100% {padding-top: 30vh; opacity: 1;}
 }
@@ -32,4 +32,4 @@
 @keyframes slideUpInfo{
     0% {padding-top: 7vh; opacity: 0;}
     100% {padding-top: 6vh; opacity: 1;}
-}
+} */

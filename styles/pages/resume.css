@@ -53,32 +53,41 @@
                 fadeIn 1s linear;
 }
 
-.displayer{
-    display: none;
-}
-
 table{
     margin: 0.5vw;
 }
 
 th{
     width: 30vw;
-    font-size: 1.7em;
+    font-size: 1.5vw;
+}
+
+thead{
+    border-bottom: 1px solid black;
+    
 }
 
 tbody{
-    font-size: 1em;
+    font-size: .9vw;
 }
 
 tbody tr:nth-child(even) {
     background-color: #c79809;
 }
 
+td{
+    vertical-align: top;
+}
+
+#tdRight{
+    padding-left: 10px;
+}
+
 #thDate{
     text-align: right;
 }
 
-@keyframes h5slideLeft{
+/* @keyframes h5slideLeft{
     0% {margin-left: 3vw; opacity: 0;}
     100% {margin-left: 0vw; opacity: 1;}
 }
@@ -86,7 +95,7 @@ tbody tr:nth-child(even) {
 @keyframes h4slideLeft{
     0% {margin-left: 2vw; opacity: 0;}
     100% {margin-left: 0vw; opacity: 1;}
-}
+} */
 
 @keyframes fadeIn{
     0% {opacity: 0;}

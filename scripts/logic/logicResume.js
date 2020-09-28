@@ -30,7 +30,6 @@ function objAddEventListeners(obj){
         tableBodyFill += objSettingTableFillArr(obj);
         tableBodyFill += '</tr>';
         resTBody.innerHTML += tableBodyFill;
-        tableBodyFill = "";
     });
 
     obj.ele.addEventListener("mouseleave", function(){
@@ -51,7 +50,9 @@ function objSettingTableHeader(obj){
 function objSettingTableFillArr(obj){
     var thisTableFill = "";
     for(var i=0; i<obj.arr.length; i++){
-        thisTableFill += '<td>' + obj.arr[i] + '</td>';
+        thisTableFill += '<td';
+        if(i%2!=0) thisTableFill += ' id="tdRight"'
+        thisTableFill += '>' + obj.arr[i] + '</td>';
         if(i%2!=0 && i!=0) thisTableFill += '</tr><tr>';
     }
     if(obj.arr.length%2!=0) thisTableFill += '<td></td>'

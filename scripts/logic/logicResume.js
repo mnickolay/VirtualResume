@@ -8,33 +8,41 @@ function resumeLogic(){
     
     //skills eventlisteners
     Object.keys(skillsObj).forEach(function(childObj){
-        objAddEventListeners(skillsObj[childObj]);
+        var obj = skillsObj[childObj];
+        objAddEventListeners(obj);
     });
 
     //education eventlisters
     Object.keys(educationObj).forEach(function(childObj){
-        objAddEventListeners(educationObj[childObj]);
+        var obj = educationObj[childObj];
+        objAddEventListeners(obj);
     });
 
     //work eventlisteners
     Object.keys(workObj).forEach(function(childObj){
-        objAddEventListeners(workObj[childObj]);
+        var obj = workObj[childObj];
+        objAddEventListeners(obj);
     });
+}
+
+function objRemoveActiveClass(){
+    var resActive = document.querySelector(".resActive");
+    if(resActive) resActive.classList.remove("resActive");
 }
 
 function objAddEventListeners(obj){
     obj.ele.addEventListener("mouseenter", function(){
+        objRemoveActiveClass();
+
+        this.classList.add("resActive");
+        resTHead.innerHTML="";
+        resTBody.innerHTML="";
         resTHead.innerHTML = objSettingTableHeader(obj);
         
         var tableBodyFill = "<tr>";
         tableBodyFill += objSettingTableFillArr(obj);
         tableBodyFill += '</tr>';
         resTBody.innerHTML += tableBodyFill;
-    });
-
-    obj.ele.addEventListener("mouseleave", function(){
-        resTHead.innerHTML="";
-        resTBody.innerHTML="";
     });
 }
 

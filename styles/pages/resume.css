@@ -1,16 +1,19 @@
 /* right */
 
 .resumeDiv{
-    position: absolute;
-    top: 1vh;
-    left: 52vw;
-    margin-right: 5vw;
-    margin-top: 8rem;
+    margin-left: 1vw;
+    padding-top: 2.5em;
+}
+
+#resumeHeader{
+    font-size: 2.75vw;
+    padding-bottom: 0.5em;
 }
 
 .resHeader{
     margin-bottom: 0;
-    font-size: 2vw;
+    font-size: 1.6vw;
+    margin-left: 10px;
     animation: h4slideLeft 1s ease;
 }
 
@@ -23,7 +26,7 @@
     animation: h5slideLeft 1s ease;
 }
 
-.resH5:hover{
+.resActive{
     color: #f0f0f0;
     font-size: 1.4vw;
     padding: 0 15px;
@@ -36,15 +39,13 @@
 /* left */
 
 .resumeBox{
-    /* min-width: 270px;
-    min-height: 270px; */
     width: 30vw;
     height: 60vh;
     max-width: 600px;
     max-height: 600px;
     position: absolute;
     left: 10vw;
-    top: 225px;
+    top: 200px;
     padding: 5px;
     box-shadow: 0 0 0 10px #f0f0f0,
                 0 0 0 11px black;

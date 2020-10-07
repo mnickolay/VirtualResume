@@ -41,7 +41,6 @@ const rightHTMLstr = '<div class="rightHTML"></div>';
 
 //about
 var svgCircles;
-var leavingAboutNext = false;
 
 //resume
 var skillsObj;

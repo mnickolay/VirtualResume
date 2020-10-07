@@ -2,7 +2,7 @@
 
 .resumeDiv{
     margin-left: 1vw;
-    padding-top: 2.5em;
+    padding-top: 5em;
 }
 
 #resumeHeader{
@@ -28,7 +28,6 @@
 
 .resActive{
     color: #f0f0f0;
-    font-size: 1.4vw;
     padding: 0 15px;
 }
 
@@ -65,11 +64,14 @@ th{
 
 thead{
     border-bottom: 1px solid black;
-    
+}
+
+#thTitle{
+    font-size: 0.9vw;
 }
 
 tbody{
-    font-size: .9vw;
+    font-size: 0.9vw;
 }
 
 tbody tr:nth-child(even) {

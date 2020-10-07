@@ -1,5 +1,5 @@
 function aboutLogic(){
-    leavingAboutNext = true;
     bodyL.innerHTML = aboutDesign;
+    bodyR.innerHTML = aboutHTML;
     aboutCircleCreation();
 }

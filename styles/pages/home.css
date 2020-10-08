@@ -1,35 +1,108 @@
-.homeDiv{
-    margin-left: 1vw;
-}
+/* .homeDiv{
+    position: absolute;
+    top: 20vw;
+    width: 34vw;
+    height: 20vw;
+} */
 
 .nameDisplay{
-    float: initial;
-    text-align: left;
+    position: absolute;
+    top: 16vw;
     line-height: 0.8;
-    font-family: 'DMSerif';
     font-size: 8vw;
-    padding-top: 30vh;
-    padding-left: 0;
     animation: slideUpName ease 1s;
     color: #F0F0F0;
-    font-weight: 100;
+    width: fit-content;
 }
 
 .infoDisplay{
+    position: absolute;
+    top: 30vw;
     font-size: 2.1vw;
-    font-family: 'DMSerif';
-    padding-top: 6vh;
     padding-left: 0;
     animation: slideUpInfo ease 1s;
     color: #F0F0F0;
+    margin-left: 0.75vw;
 }
 
-/* @keyframes slideUpName{
-    0% {padding-top: 33vh; opacity: 0;}
-    100% {padding-top: 30vh; opacity: 1;}
+.designBar{
+    position: absolute;
+    background-color: rgb(255, 23, 74);
+}
+
+#homeDesignBar1{
+    top: 13.5vw;
+    left: 49vw;
+    animation: bar1 1s ease-in-out;
+}
+
+#homeDesignBar2{
+    top: 13.5vw;
+    left: 49vw;
+    animation: bar2 1s ease-in-out;
+}
+
+#homeDesignBar3{
+    top: 36.5vw;
+    left: 49vw;
+    animation: bar3 2s ease-in-out;
+}
+
+#homeDesignBar4{
+    top: 13.5vw;
+    left: 82vw;
+    animation: bar4 2s ease-in-out;
+}
+
+#homeDesignBar5{
+    width: 8vw;
+    height: 8vw;
+    top: 15.25vw;
+    left: 75vw;
+    /* animation: bar5 3s ease-in-out; */
+}
+
+@keyframes bar1{
+    0% {width: 1vw; height: 1vw; left: 49vw;}
+    50% {width: 38vw; height: 1vw; left: 49vw;}
+    100% {width: 1vw; height: 1vw; left: 82vw}
+}
+
+@keyframes bar2{
+    0% {width: 1vw; height: 1vw; top: 13.5vw;}
+    50% {width: 1vw; height: 24vw; top: 13.5vw;}
+    100% {width: 1vw; height: 1vw; top: 36.5vw}
+}
+
+@keyframes bar3{
+    0% {width: 1vw; height: 1vw; opacity: 0;}
+    49% {width: 1vw; height: 1vw; opacity: 0;}
+    50% {width: 1vw; height: 1vw; opacity: 1;}
+    75% {width: 39vw; height: 1vw; left: 49vw;}
+    100% {width: 1vw; height: 1vw; left: 82vw;}
+}
+
+@keyframes bar4{
+    0% {width: 1vw; height: 1vw; opacity: 0;}
+    49% {width: 1vw; height: 1vw; opacity: 0;}
+    50% {width: 1vw; height: 1vw; opacity: 1;}
+    75% {width: 1vw; height: 25vw; top: 13.5vw;}
+    100% {width: 1vw; height: 1vw; top: 36.5vw; top: 36.5vw;}
+}
+
+@keyframes bar5{
+    0% {width: 1vw; height: 1vw; opacity: 0;}
+    66% {width: 1vw; height: 1vw; opacity: 0;}
+    67% {width: 1vw; height: 1vw; opacity: 1; top: 36.5vw; left: 82vw;}
+    100% {width: 1vw; height: 1vw; opacity: 1; top: 34.5vw; left: 81vw;}
+}
+
+@keyframes slideUpName{
+    0% {top: 18vw; opacity: 0;}
+    100% {top: 16vw; opacity: 1;}
 }
 
 @keyframes slideUpInfo{
-    0% {padding-top: 7vh; opacity: 0;}
-    100% {padding-top: 6vh; opacity: 1;}
-} */
+    0% {top: 31vw; opacity: 0;}
+    100% {top: 30vw; opacity: 1;}
+}

@@ -35,7 +35,7 @@ html, body{
     animation: scrollDown 1s ease;
 }
 
-.scrollUp{
+/* .scrollUp{
     animation: scrollUp 1s ease;
 }
 
@@ -51,7 +51,7 @@ html, body{
 @keyframes scrollDUp{
     0% {opacity: 0; margin-top: 25px;}
     100% {opacity: 1; margin-top: 0;}
-}
+} */
 
 @font-face{
     font-family: 'Raleway';

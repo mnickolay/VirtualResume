@@ -59,7 +59,7 @@
     height: 8vw;
     top: 15.25vw;
     left: 75vw;
-    /* animation: bar5 3s ease-in-out; */
+    animation: bar5 3s ease-in-out;
 }
 
 @keyframes bar1{

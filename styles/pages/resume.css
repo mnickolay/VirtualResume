@@ -20,7 +20,7 @@
 .resH5{
     width: max-content;
     font-weight: 300;
-    font-size: 1vw;
+    font-size: 0.9vw;
     margin: 15px 0vw;
     transition: all 0.25s ease;
     animation: h5slideLeft 1s ease;

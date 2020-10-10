@@ -5,6 +5,7 @@ const homeHTML =
 <div class="designBar" id="homeDesignBar3"></div>
 <div class="designBar" id="homeDesignBar4"></div>
 <div class="designBar" id="homeDesignBar5"></div>
+<div class="designBar" id="homeDesignBar6"></div>
 <div class="homeDiv">
     <div class="nameDisplay">
         <div class="nameDisplayText">Matthew</div>

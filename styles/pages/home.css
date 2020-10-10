@@ -27,74 +27,85 @@
 
 .designBar{
     position: absolute;
-    background-color: rgb(255, 23, 74);
+    top: 15.25vw;
+    height: 15vw;
+    width: 5vw;
+    transform: skew(-22deg);
+    border-radius: 30px 0 0 30px;
 }
 
 #homeDesignBar1{
-    top: 13.5vw;
-    left: 49vw;
-    animation: bar1 1s ease-in-out;
+    left: 82vw;
+    background-color: #12BB8E;
+    animation: bar1 1.6s ease;
 }
 
 #homeDesignBar2{
-    top: 13.5vw;
-    left: 49vw;
-    animation: bar2 1s ease-in-out;
+    left: 81vw;
+    background-color: #FFB6BD;
+    animation: bar2 1.5s ease;
 }
 
 #homeDesignBar3{
-    top: 36.5vw;
-    left: 49vw;
-    animation: bar3 2s ease-in-out;
+    left: 80vw;
+    background-color: #D1A212;
+    animation: bar3 1.4s ease;
 }
 
 #homeDesignBar4{
-    top: 13.5vw;
-    left: 82vw;
-    animation: bar4 2s ease-in-out;
+    left: 79vw;
+    background-color: #ff0044;
+    animation: bar4 1.3s ease;
 }
 
 #homeDesignBar5{
-    width: 8vw;
-    height: 8vw;
-    top: 15.25vw;
-    left: 75vw;
-    /* animation: bar5 3s ease-in-out; */
-}
-
-@keyframes bar1{
-    0% {width: 1vw; height: 1vw; left: 49vw;}
-    50% {width: 38vw; height: 1vw; left: 49vw;}
-    100% {width: 1vw; height: 1vw; left: 82vw}
-}
-
-@keyframes bar2{
-    0% {width: 1vw; height: 1vw; top: 13.5vw;}
-    50% {width: 1vw; height: 24vw; top: 13.5vw;}
-    100% {width: 1vw; height: 1vw; top: 36.5vw}
-}
-
-@keyframes bar3{
-    0% {width: 1vw; height: 1vw; opacity: 0;}
-    49% {width: 1vw; height: 1vw; opacity: 0;}
-    50% {width: 1vw; height: 1vw; opacity: 1;}
-    75% {width: 39vw; height: 1vw; left: 49vw;}
-    100% {width: 1vw; height: 1vw; left: 82vw;}
-}
-
-@keyframes bar4{
-    0% {width: 1vw; height: 1vw; opacity: 0;}
-    49% {width: 1vw; height: 1vw; opacity: 0;}
-    50% {width: 1vw; height: 1vw; opacity: 1;}
-    75% {width: 1vw; height: 25vw; top: 13.5vw;}
-    100% {width: 1vw; height: 1vw; top: 36.5vw; top: 36.5vw;}
+    left: 78vw;
+    background-color: #031E79;
+    animation: bar5 1.2s ease;
 }
 
 @keyframes bar5{
-    0% {width: 1vw; height: 1vw; opacity: 0;}
-    66% {width: 1vw; height: 1vw; opacity: 0;}
-    67% {width: 1vw; height: 1vw; opacity: 1; top: 36.5vw; left: 82vw;}
-    100% {width: 1vw; height: 1vw; opacity: 1; top: 34.5vw; left: 81vw;}
+    0% {border-radius: 0;}
+    20% {left: 45vw; border-radius: 30px 0 0 30px;}
+    75% {left: 78vw;}
+    90% {left: 78vw;}
+    100% {left: 78vw;}
+}
+
+@keyframes bar4{
+    0% {opacity: 0;}
+    19% {opacity: 0;}
+    20% {left: 45vw; opacity: 1;}
+    75% {left: 78vw;}
+    90% {left: 78vw;}
+    100% {left: 79vw;}
+}
+
+@keyframes bar3{
+    0% {opacity: 0;}
+    19% {opacity: 0;}
+    20% {left: 45vw; opacity: 1;}
+    75% {left: 78vw;}
+    90% {left: 78vw;}
+    100% {left: 80vw;}
+}
+
+@keyframes bar2{
+    0% {opacity: 0;}
+    19% {opacity: 0;}
+    20% {left: 45vw; opacity: 1;}
+    75% {left: 78vw;}
+    90% {left: 78vw;}
+    100% {left: 81vw;}
+}
+
+@keyframes bar1{
+    0% {opacity: 0;}
+    19% {opacity: 0;}
+    20% {left: 45vw; opacity: 1;}
+    75% {left: 78vw;}
+    90% {left: 78vw;}
+    100% {left: 82vw;}
 }
 
 @keyframes slideUpName{

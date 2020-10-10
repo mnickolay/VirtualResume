@@ -1,5 +1,7 @@
 const resumeHTML = 
-`<div class="resumeDiv">
+`
+<div class="resumeBar"></div>
+<div class="resumeDiv">
     <div id="resumeHeader">Resume</div>
     <div id="skills">
         <h2 class="resHeader" id="skillsHeader">Skills</h2>

@@ -2,18 +2,19 @@
 
 .resumeDiv{
     margin-left: 1vw;
-    padding-top: 5em;
+    padding-top: 5vw;
 }
 
 #resumeHeader{
     font-size: 2.75vw;
     padding-bottom: 0.5em;
+    animation: headSlideLeft 1s ease;
 }
 
 .resHeader{
     margin-bottom: 0;
     font-size: 1.6vw;
-    margin-left: 10px;
+    margin-left: 1vw;
     animation: h4slideLeft 1s ease;
 }
 
@@ -75,7 +76,7 @@ tbody{
 }
 
 tbody tr:nth-child(even) {
-    background-color: #c79809;
+    background-color: #b18500;
 }
 
 td{
@@ -90,15 +91,34 @@ td{
     text-align: right;
 }
 
-/* @keyframes h5slideLeft{
-    0% {margin-left: 3vw; opacity: 0;}
+.resumeBar{
+    position: absolute;
+    top: 5vw;
+    left: 50vw;
+    height: 4vw;
+    width: 0.5vw;
+    background-color: #775a00;
+    animation: barSlide .8s ease;
+}
+
+@keyframes barSlide{
+    0% {height: 0vw;}
+}
+
+@keyframes h5slideLeft{
+    0% {margin-left: 3vw; opacity: 0; letter-spacing: 1px;}
     100% {margin-left: 0vw; opacity: 1;}
 }
 
 @keyframes h4slideLeft{
-    0% {margin-left: 2vw; opacity: 0;}
-    100% {margin-left: 0vw; opacity: 1;}
-} */
+    0% {margin-left: 3vw; opacity: 0; letter-spacing: 2px;}
+    100% {margin-left: 1vw; opacity: 1;}
+}
+
+@keyframes headSlideLeft{
+    0% {margin-left: 2vw; letter-spacing: 6px;}
+    100% {}   
+}
 
 @keyframes fadeIn{
     0% {opacity: 0;}

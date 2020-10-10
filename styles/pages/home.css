@@ -1,9 +1,21 @@
-/* .homeDiv{
+#homeImage{
     position: absolute;
-    top: 20vw;
-    width: 34vw;
-    height: 20vw;
-} */
+    top: 7vw;
+    left: 14vw;
+    width: 24vw;
+    height: auto;
+    animation: fadeIn 0.7s ease;
+}
+
+.imageBar{
+    position: absolute;
+    top: 5vw;
+    left: 5vw;
+    background-color: #f0f0f0;
+    height: 10vw;
+    width: 20vw;
+    transform: rotate(-45deg);
+}
 
 .nameDisplay{
     position: absolute;
@@ -31,30 +43,31 @@
     height: 15vw;
     width: 5vw;
     transform: skew(-22deg);
-    border-radius: 30px 0 0 30px;
+    /* border-radius: 30px 0 0 30px; */
 }
 
 #homeDesignBar1{
-    left: 82vw;
-    background-color: #12BB8E;
+    left: 81vw;
+    background-color: #ff0044;
     animation: bar1 1.6s ease;
+
 }
 
 #homeDesignBar2{
-    left: 81vw;
-    background-color: #FFB6BD;
+    left: 80.25vw;
+    background-color: #006eff;
     animation: bar2 1.5s ease;
 }
 
 #homeDesignBar3{
-    left: 80vw;
-    background-color: #D1A212;
+    left: 79.5vw;
+    background-color: #0037eb;
     animation: bar3 1.4s ease;
 }
 
 #homeDesignBar4{
-    left: 79vw;
-    background-color: #ff0044;
+    left: 78.75vw;
+    background-color: #002499;
     animation: bar4 1.3s ease;
 }
 
@@ -65,47 +78,43 @@
 }
 
 @keyframes bar5{
-    0% {border-radius: 0;}
-    20% {left: 45vw; border-radius: 30px 0 0 30px;}
-    75% {left: 78vw;}
-    90% {left: 78vw;}
+    0% {left: 78vw; border-radius: 0; opacity: 0;}
+    20% {border-radius: 0 30px 30px 0; opacity: 1;}
+    30% {left: 45vw; border-radius: 30px 0 0 30px;}
+    70% {left: 78vw;}
     100% {left: 78vw;}
 }
 
 @keyframes bar4{
     0% {opacity: 0;}
-    19% {opacity: 0;}
-    20% {left: 45vw; opacity: 1;}
-    75% {left: 78vw;}
-    90% {left: 78vw;}
-    100% {left: 79vw;}
+    29% {opacity: 0;}
+    30% {left: 45vw; opacity: 1; border-radius: 30px 0 0 30px;}
+    70% {left: 78vw;}
+    100% {left: 78.75vw;}
 }
 
 @keyframes bar3{
     0% {opacity: 0;}
-    19% {opacity: 0;}
-    20% {left: 45vw; opacity: 1;}
-    75% {left: 78vw;}
-    90% {left: 78vw;}
-    100% {left: 80vw;}
+    29% {opacity: 0;}
+    30% {left: 45vw; opacity: 1; border-radius: 30px 0 0 30px;}
+    70% {left: 78vw;}
+    100% {left: 79.5vw;}
 }
 
 @keyframes bar2{
     0% {opacity: 0;}
-    19% {opacity: 0;}
-    20% {left: 45vw; opacity: 1;}
-    75% {left: 78vw;}
-    90% {left: 78vw;}
-    100% {left: 81vw;}
+    29% {opacity: 0;}
+    30% {left: 45vw; opacity: 1; border-radius: 30px 0 0 30px;}
+    70% {left: 78vw;}
+    100% {left: 80.25vw;}
 }
 
 @keyframes bar1{
     0% {opacity: 0;}
-    19% {opacity: 0;}
-    20% {left: 45vw; opacity: 1;}
-    75% {left: 78vw;}
-    90% {left: 78vw;}
-    100% {left: 82vw;}
+    29% {opacity: 0;}
+    30% {left: 45vw; opacity: 1; border-radius: 30px 0 0 30px;}
+    70% {left: 78vw;}
+    100% {left: 81vw;}
 }
 
 @keyframes slideUpName{
@@ -116,4 +125,9 @@
 @keyframes slideUpInfo{
     0% {top: 31vw; opacity: 0;}
     100% {top: 30vw; opacity: 1;}
+}
+
+@keyframes fadeIn{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }

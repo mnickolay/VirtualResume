@@ -18,44 +18,27 @@ function removeActive(){
 };
 
 function findLogicSwitch() {
+    resetRLHTML();
     switch(page){
         case "home":
-            removeLogic();
             homeLogic();
             break;
         case "resume":
-            removeLogic();
             resumeLogic();
             break;
         case "about":
-            removeLogic();
             aboutLogic();
             break;
         case "contact":
-            removeLogic();
             contactLogic();
             break;
     }
 };
-
-function removeLogic(){
-    // if(leavingAboutNext){
-    //     leavingAboutNext = false;
-    //     svgCircles.style.opacity = 0;
-    //     setTimeout(function(){
-    //         bodyL.innerHTML = leftHTMLstr;
-    //     }, 500);
-    //     bodyR.innerHTML = rightHTMLstr;
-    // }else{
-    //     bodyL.innerHTML = leftHTMLstr;
-    //     bodyR.innerHTML = rightHTMLstr;
-    // }
-    resetRLHTML();
-}
 
 function resetRLHTML(){
     bodyL.innerHTML = leftHTMLstr;
     bodyR.innerHTML = rightHTMLstr;
     rightHTML = document.querySelector(".rightHTML");
     leftHTML = document.querySelector(".leftHTML");
+    clearInterval(blinkerInterval)
 }

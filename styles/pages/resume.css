@@ -2,7 +2,7 @@
 
 .resumeDiv{
     margin-left: 1vw;
-    padding-top: 5vw;
+    padding-top: 3vw;
 }
 
 #resumeHeader{
@@ -13,27 +13,37 @@
 
 .resHeader{
     margin-bottom: 0;
-    font-size: 1.6vw;
+    font-size: 1.5vw;
     margin-left: 1vw;
     animation: h4slideLeft 1s ease;
+}
+
+.resumeBar{
+    position: absolute;
+    top: 3vw;
+    left: 50vw;
+    height: 4vw;
+    width: 0.5vw;
+    background-color: #775a00;
+    animation: barSlide .8s ease;
 }
 
 .resH5{
     width: max-content;
     font-weight: 300;
-    font-size: 0.9vw;
-    margin: 15px 0vw;
+    font-size: 1.1vw;
+    margin: 1vw 0vw;
     transition: all 0.25s ease;
     animation: h5slideLeft 1s ease;
 }
 
 .resActive{
-    color: #f0f0f0;
+    color: #D1A212;
     padding: 0 15px;
 }
 
 .resPushRight{
-    margin: 20px 2.5vw;
+    margin: 1vw 2.5vw;
 }
 
 /* left */
@@ -45,7 +55,7 @@
     max-height: 600px;
     position: absolute;
     left: 10vw;
-    top: 200px;
+    top: 12vw;
     padding: 5px;
     box-shadow: 0 0 0 10px #f0f0f0,
                 0 0 0 11px black;
@@ -89,16 +99,6 @@ td{
 
 #thDate{
     text-align: right;
-}
-
-.resumeBar{
-    position: absolute;
-    top: 5vw;
-    left: 50vw;
-    height: 4vw;
-    width: 0.5vw;
-    background-color: #775a00;
-    animation: barSlide .8s ease;
 }
 
 @keyframes barSlide{

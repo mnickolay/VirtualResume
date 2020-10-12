@@ -12,6 +12,7 @@ var blinkerInterval;
 function contactLogic(){
     leftHTML.innerHTML = contactDesign;
     rightHTML.innerHTML = contactHTML;
+    rightColor.style.transform = "skew(-10deg)"
     contactObjArr = setContactObjects();
     inputField = document.querySelector("#inputField");
     blinker = document.querySelector("#blinkBar");

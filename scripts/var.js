@@ -26,6 +26,7 @@ const green = "#12bb8e";
 const pink = "#ffb6bd";
 
 //body
+var rightColor = document.querySelector("#rightColor")
 var bodyR = document.querySelector(".bodyRight");
 var bodyL = document.querySelector(".bodyLeft");
 var rightHTML = document.querySelector(".rightHTML");

@@ -5,6 +5,7 @@ html, body{
     margin: 0;
     font-family: "Raleway";
     overflow: hidden;
+    background-color: #f0f0f0;
 }
 
 .websiteBody{
@@ -20,16 +21,48 @@ html, body{
     float: left;
     width: 50%;
     min-height: 2000px;
-    background-color: #f0f0f0;
+    /* background-color: #f0f0f0; */
     transition: all 1s ease;
+    z-index: -5;
 }
 
 .bodyRight{
     float: right;
     width: 50%;
     min-height: 2000px;
-    background-color: #0534cf;
+    /* background-color: #0534cf; */
     transition: all 0.2s ease;
+    z-index: -5;
+}
+
+/* #skewedBar{
+    position: absolute;
+    top: 0;
+    left: 30vw;
+    width: 30vw;
+    height: 1000px;
+    transform: skew(-15deg);
+    background-color: #f0f0f0;
+    z-index: -1;
+} */
+
+/* #leftColor{
+    width: 75vw;
+    right: 150;
+    background-color: #f0f0f0;
+    z-index: -1;
+} */
+
+#rightColor{
+    position: absolute;
+    top: 0;
+    height: 1200px;
+    transform: skew(-15deg);
+    width: 50vw;
+    left: 85vw;
+    background-color: #0534cf;
+    z-index: -1;
+    transition: all 1s ease;
 }
 
 .rightHTML{

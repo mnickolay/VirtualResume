@@ -10,21 +10,20 @@
 .imageBar{
     position: absolute;
     top: 5vw;
-    left: 5vw;
+    left: 9vw;
     background-color: #f0f0f0;
-    height: 10vw;
-    width: 20vw;
-    transform: rotate(-45deg);
+    height: 28vw;
+    width: 8vw;
+    transform: rotate(15deg);
 }
-
 .nameDisplay{
     position: absolute;
     top: 16vw;
     line-height: 0.8;
     font-size: 8vw;
     animation: slideUpName ease 1s;
-    /* color: #F0F0F0; */
     width: fit-content;
+    font-weight: 200;
 }
 
 .infoDisplay{
@@ -33,7 +32,6 @@
     font-size: 2.1vw;
     padding-left: 0;
     animation: slideUpInfo ease 1s;
-    /* color: #F0F0F0; */
     margin-left: 0.75vw;
 }
 
@@ -43,7 +41,6 @@
     height: 15vw;
     width: 5vw;
     transform: skew(-15deg);
-    /* border-radius: 30px 0 0 30px; */
 }
 
 #homeDesignBar1{

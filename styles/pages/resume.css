@@ -1,8 +1,10 @@
 /* right */
 
+
 .resumeDiv{
     margin-left: 1vw;
     padding-top: 3vw;
+    font-family: 'Overpass200';
 }
 
 #resumeHeader{
@@ -49,14 +51,15 @@
 /* left */
 
 .resumeBox{
+    position: absolute;
+    left: 10vw;
+    top: 12vw;
     width: 30vw;
     height: 60vh;
     max-width: 600px;
     max-height: 600px;
-    position: absolute;
-    left: 10vw;
-    top: 12vw;
     padding: 5px;
+    font-family: 'Overpass200';
     box-shadow: 0 0 0 10px #f0f0f0,
                 0 0 0 11px black;
     background-color: #d1a212;
@@ -82,7 +85,7 @@ thead{
 }
 
 tbody{
-    font-size: 0.9vw;
+    font-size: 0.95vw;
 }
 
 tbody tr:nth-child(even) {
@@ -132,14 +135,14 @@ td{
 
     25% {box-shadow: 0 0 0 0px #f0f0f0,
                     0 0 0 0px black,
-                    0 0 0 10px #d1a212}
+                    0 0 0 20px #d1a212}
                     
     50% {box-shadow: 0 0 0 0px #f0f0f0,
-                    0 0 0 11px black,
-                    0 0 0 10px #d1a212}
+                    0 0 0 20px black,
+                    0 0 0 20px #d1a212}
 
     100% {box-shadow:
                     0 0 0 10px #f0f0f0,
                     0 0 0 11px black,
-                    0 0 0 0px #d1a212}
+                    0 0 0 10px #d1a212}
 }

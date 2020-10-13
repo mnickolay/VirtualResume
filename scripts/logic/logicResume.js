@@ -151,7 +151,7 @@ function setResumeVariables(){
         },
         gilbert: {
             ele: document.querySelector(".gilbertHead"),
-            date: '05/2019 - 08/2020',
+            date: '05/2019 - 08/2019',
             title: 'Pre-Apprentice',
             arr: [
                 'Tasked with assisting journeymen with installing commercial HVAC equipment.',
@@ -161,7 +161,7 @@ function setResumeVariables(){
         },
         mmc: {
             ele: document.querySelector(".mmcHead"),
-            date: '05/2018 - 08/2020',
+            date: '05/2018 - 08/2018',
             title: 'Pre-Apprentice',
             arr: [
                 'The job mainly consisted of full time condenser coil cleaning with a permenent teammeate.',

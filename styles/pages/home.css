@@ -9,12 +9,12 @@
 
 .imageBar{
     position: absolute;
-    top: 4.5vw;
-    left: 9.5vw;
+    top: 2vw;
+    left: 12.4vw;
     background-color: #f0f0f0;
-    height: 28vw;
+    height: 15vw;
     width: 8vw;
-    transform: rotate(20deg);
+    transform: rotate(45deg);
 }
 .nameDisplay{
     position: absolute;
@@ -44,81 +44,78 @@
 }
 
 #homeDesignBar1{
-    left: 81vw;
-    background-color: #0534cf;
+    left: 79.7vw;
+    background-color: #9aace7;
     animation: bar1 1.4s ease;
 }
 
 #homeDesignBar2{
-    left: 80.25vw;
-    background-color: #ffb6bd;
+    left: 79.3vw;
+    background-color: #6e89e2;
     animation: bar2 1.35s ease;
-    opacity: 0;
 }
 
 #homeDesignBar3{
-    left: 79.5vw;
-    background-color: #136b47;
+    left: 78.9vw;
+    background-color: #496ee8;
     animation: bar3 1.3s ease;
-    opacity: 0;
 }
 
 #homeDesignBar4{
-    left: 78.75vw;
-    background-color: #d1a212;
+    left: 78.5vw;
+    background-color: #0534cf;
     animation: bar4 1.25s ease;
-    opacity: 0;
 }
 
 #homeDesignBar5{
-    left: 78.2vw;
+    left: 78.1vw;
     background-color: #212529;
     animation: bar5 1.2s ease;
 }
 
 @keyframes bar5{
     0% {left: 78vw; border-radius: 0; opacity: 0;}
-    25% {opacity: 1;}
+    25% {left: 78vw; opacity: 1;}
     45% {left: 45vw; border-radius: 10px 0 0 10px;}
-    80% {left: 81vw;}
-    95% {left: 81vw;}
-    100% {left: 78.2vw;}
+    80% {left: 79.7vw;}
+    95% {left: 79.7vw;}
+    100% {left: 78.1vw;}
 }
 
 @keyframes bar4{
     0% {opacity: 0;}
     44% {opacity: 0;}
     45% {left: 45vw; opacity: 1; border-radius: 30px 0 0 30px;}
-    80% {left: 81vw; opacity: 1;}
-    95% {left: 81vw; opacity: 0;}
-    100% {left: 78.95vw;}
+    80% {left: 79.7vw;}
+    95% {left: 79.7vw;}
+    100% {left: 78.5vw;}
 }
 
 @keyframes bar3{
     0% {opacity: 0;}
     44% {opacity: 0;}
     45% {left: 45vw; opacity: 1; border-radius: 30px 0 0 30px;}
-    80% {left: 81vw; opacity: 1;}
-    95% {left: 81vw; opacity: 0;}
-    100% {left: 79.7vw;}
+    80% {left: 79.7vw;}
+    95% {left: 79.7vw;}
+    100% {left: 78.9vw;}
 }
 
 @keyframes bar2{
     0% {opacity: 0;}
     44% {opacity: 0;}
     45% {left: 45vw; opacity: 1; border-radius: 30px 0 0 30px;}
-    80% {left: 81vw; opacity: 1;}
-    95% {left: 81vw; opacity: 0;}
-    100% {left: 80.45vw;}
+    80% {left: 79.7vw;}
+    95% {left: 79.7vw;}
+    100% {left: 79.3vw;}
 }
 
 @keyframes bar1{
     0% {opacity: 0;}
     44% {opacity: 0;}
     45% {left: 45vw; opacity: 1; border-radius: 30px 0 0 30px;}
-    80% {left: 81vw;}
-    95% {left: 81vw;}
-    100% {left: 78.75vw;}
+    80% {left: 79.7vw;}
+    95% {left: 79.7vw;}
+    100% {left: 79.7vw;}
 }
 
 @keyframes slideUpName{

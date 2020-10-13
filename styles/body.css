@@ -22,7 +22,6 @@ html, body{
     float: left;
     width: 50%;
     min-height: 2000px;
-    /* background-color: #f0f0f0; */
     transition: all 1s ease;
     z-index: -5;
 }
@@ -31,7 +30,6 @@ html, body{
     float: right;
     width: 50%;
     min-height: 2000px;
-    /* background-color: #0534cf; */
     transition: all 0.2s ease;
     z-index: -5;
 }
@@ -40,9 +38,10 @@ html, body{
     position: absolute;
     top: 0;
     height: 100vw;
+    min-height: 1000px;
     transform: skew(-20deg);
     width: 50vw;
-    left: 80vw;
+    right: -30vw;
     background-color: #0534cf;
     z-index: -1;
     transition: all 1s ease;

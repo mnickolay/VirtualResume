@@ -1,5 +1,6 @@
 function pageScrollNavClick(clr, pg, cir){
     rightColor.style.backgroundColor = clr;
+    currentColor = clr;
     page = pg;
     removeActive();
     addActive(cir);

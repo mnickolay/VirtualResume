@@ -1,7 +1,7 @@
-$(window).resize(function(){
-    width = window.innerWidth;
-    height = window.innerHeight;
-});
+// $(window).resize(function(){
+//     width = window.innerWidth;
+//     height = window.innerHeight;
+// });
 
 function findNavSwitch(scroll){
     switch(page){

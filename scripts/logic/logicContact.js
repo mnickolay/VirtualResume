@@ -1,10 +1,13 @@
+//text fill left side
 var inputField;
-var contactObjArr;
 var blinker;
 var textCharCounter = 0;
 var blinkerVal = 10;
+
+//conditional
 var emptyField = true;
-var lockedTypeAnim = false;
+
+//intervals
 var addingLetters;
 var removingLetters;
 var blinkerInterval;
@@ -18,6 +21,7 @@ function contactLogic(){
     blinker = document.querySelector("#blinkBar");
     setBlinkerValues()
 
+    //blinker animation
     blinkerInterval =  setInterval(() => {
         if(blinker.classList.contains("blinkerFade"))
             blinker.classList.remove("blinkerFade")
@@ -25,24 +29,30 @@ function contactLogic(){
             blinker.classList.add("blinkerFade")
     }, 500);
 
-
+    //eventlisteners
     Object.keys(contactObjArr).forEach(function(childObj){
         contactObjArr[childObj].ele.addEventListener("mouseenter", function(){
+            clearTextIntervals();
             if(contactObjArr[childObj].text != inputField.innerText)
                 contactTypeLogic(contactObjArr[childObj]);
         })
     })
 }
 
+function clearTextIntervals(){
+    clearInterval(addingLetters);
+    clearInterval(removingLetters);
+}
+
 function contactTypeLogic(obj){
-    if(emptyField && !lockedTypeAnim){
+    if(emptyField){
         emptyField = false;
         clearInterval(removingLetters);
         
         obj.ele.classList.add("activeContact");
         writeContactText(obj);
 
-    }else if(!emptyField && !lockedTypeAnim){
+    }else{
         lockedTypeAnim = true;
         clearInterval(addingLetters);
         removeContactText(obj);

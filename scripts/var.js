@@ -47,3 +47,6 @@ var svgCircles;
 var skillsObj;
 var educationObj;
 var workObj;
+
+//contact
+var contactObjArr;

@@ -22,7 +22,7 @@ var navCircleArr = [navCircle1,navCircle2,navCircle3,navCircle4];
 var currentColor = "#0000ff";
 const blue = "#0534cf";
 const yellow = "#d1a212";
-const green = "#12bb8e";
+const green = "#136b47";
 const pink = "#ffb6bd";
 
 //body

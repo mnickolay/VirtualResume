@@ -16,6 +16,7 @@
     text-align: center;
     line-height: 5.75vw;
     font-size: 2.25vw;
+    font-family: 'Raleway';
     border-radius: 15px;
     transition: border-radius 2s ease,
                 background-color 1s linear,

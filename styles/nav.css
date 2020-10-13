@@ -25,10 +25,6 @@
 
 }
 
-#navCircle4{
-    
-}
-
 .navText{
     position: absolute;
     display: none;
@@ -61,7 +57,7 @@
 }
 
 #navCircle4:hover{
-    background-color: #12bb8e;
+    background-color: #136b47;
 }
 
 #navCircle1:hover #navHome,

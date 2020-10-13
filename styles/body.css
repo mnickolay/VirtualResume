@@ -3,7 +3,8 @@ html, body{
     max-height: fit-content;
     padding: 0;
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-family: 'Overpass100';
     overflow: hidden;
     background-color: #f0f0f0;
 }
@@ -35,31 +36,13 @@ html, body{
     z-index: -5;
 }
 
-/* #skewedBar{
-    position: absolute;
-    top: 0;
-    left: 30vw;
-    width: 30vw;
-    height: 1000px;
-    transform: skew(-15deg);
-    background-color: #f0f0f0;
-    z-index: -1;
-} */
-
-/* #leftColor{
-    width: 75vw;
-    right: 150;
-    background-color: #f0f0f0;
-    z-index: -1;
-} */
-
 #rightColor{
     position: absolute;
     top: 0;
-    height: 1200px;
-    transform: skew(-15deg);
+    height: 100vw;
+    transform: skew(-20deg);
     width: 50vw;
-    left: 85vw;
+    left: 80vw;
     background-color: #0534cf;
     z-index: -1;
     transition: all 1s ease;
@@ -77,4 +60,14 @@ html, body{
 @font-face{
     font-family: 'DMSerif';
     src: url(../fonts/DMSerifText-Regular.ttf);
+}
+
+@font-face{
+    font-family: 'Overpass100';
+    src: url(../fonts/Overpass-Thin.ttf);
+}
+
+@font-face{
+    font-family: 'Overpass200';
+    src: url(../fonts/Overpass-ExtraLight.ttf);
 }

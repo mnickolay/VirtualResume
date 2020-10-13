@@ -3,12 +3,7 @@ $(window).resize(function(){
     height = window.innerHeight;
 });
 
-$(window).bind('mousewheel', function(event) {
-    if (event.originalEvent.wheelDelta >= 0) findScrollSwitch("up");
-    else findScrollSwitch("down")
-});
-
-function findScrollSwitch(scroll){
+function findNavSwitch(scroll){
     switch(page){
         case "home":
             if(scroll=="down")

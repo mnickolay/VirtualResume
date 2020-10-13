@@ -1,12 +1,12 @@
-logoMain.mouseenter(function(){
-    logoMain.css("backgroundColor", currentColor)
-    logoMain.css("borderColor", currentColor)
-});
+logoMain.addEventListener("mouseenter", () =>{
+    logoMain.style.backgroundColor = currentColor;
+    logoMain.style.borderColor = currentColor;
+})
 
-logoMain.mouseleave(function(){
-    logoMain.css("backgroundColor", "transparent")
-    logoMain.css("borderColor", "black")
-});
+logoMain.addEventListener("mouseleave", () =>{
+    logoMain.style.backgroundColor = "transparent";
+    logoMain.style.borderColor = "black";
+})
 
 setInterval(function(){
     cssBorderRadius(logoMain);
@@ -38,7 +38,7 @@ function cssBorderRadius(ele){
     for(var i=0; i<4; i++){
         borderString+=valueFinder() + " ";
     }
-    ele.css("border-radius", borderString);
+    ele.style.borderRadius = borderString;
     borderString="";
 }
 

@@ -33,7 +33,7 @@ var rightHTML = document.querySelector(".rightHTML");
 var leftHTML = document.querySelector(".leftHTML");
 
 //logo
-var logoMain = $(".logoMain"),
+var logoMain = document.querySelector(".logoMain"),
     borderString = "";
 
 //html

@@ -10,7 +10,8 @@
 #resumeHeader{
     font-size: 2.75vw;
     padding-bottom: 0.5em;
-    animation: headSlideLeft 1s ease;
+    animation: headSlideLeft 1s ease,
+                fadeIn 1s ease;;
 }
 
 .resHeader{

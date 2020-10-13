@@ -1,5 +1,9 @@
 //text fill left side
 var inputField;
+var inputFieldDetail;
+var textHide1;
+var textHide2;
+var width;
 var blinker;
 var textCharCounter = 0;
 var blinkerVal = 10;
@@ -16,9 +20,15 @@ function contactLogic(){
     leftHTML.innerHTML = contactDesign;
     rightHTML.innerHTML = contactHTML;
     rightColor.style.transform = "skew(-10deg)"
+
     contactObjArr = setContactObjects();
+
     inputField = document.querySelector("#inputField");
+    inputFieldDetail = document.querySelector("#inputFieldDetail");
+    textHide1 = document.querySelector("#textHide1");
+    textHide2 = document.querySelector("#textHide2");
     blinker = document.querySelector("#blinkBar");
+
     setBlinkerValues()
 
     //blinker animation
@@ -54,6 +64,7 @@ function contactTypeLogic(obj){
 
     }else{
         lockedTypeAnim = true;
+        textHideAnimation()
         clearInterval(addingLetters);
         removeContactText(obj);
     }
@@ -68,6 +79,7 @@ function writeContactText(obj){
         
         if(textCharCounter == obj.text.length){
             clearInterval(addingLetters)
+            showTextDetail(obj)
         }
     }, 140)
 }
@@ -92,6 +104,26 @@ function finishRemoval(obj){
     lockedTypeAnim = false;
     setBlinkerValues();
     contactTypeLogic(obj);
+}
+
+function showTextDetail(obj){
+    inputFieldDetail.innerHTML = obj.fill;
+    width = inputFieldDetail.clientWidth;
+    width = width/window.innerWidth * 100
+    textShowAnimation(width)
+}
+
+function textShowAnimation(width){
+    textHide1.style.width = "0.25vw"
+    textHide1.style.left = (width+10.25) + "vw";
+    textHide2.style.width = "0vw"
+    textHide2.style.right = (90-width) + "vw"
+}
+
+function textHideAnimation(){
+    textHide1.style.width = "0.25vw"
+    textHide1.style.left = "10vw"
+    textHide2.style.width = (width+10.25) + "vw"
 }
 
 function checkForActive(){

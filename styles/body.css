@@ -36,6 +36,7 @@ html, body{
 #rightColor{
     position: absolute;
     top: 0;
+    min-height: max-content;
     height: 1000px;
     transform: skew(-20deg);
     width: 50vw;

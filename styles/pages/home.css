@@ -121,13 +121,13 @@
 }
 
 @keyframes slideUpName{
-    0% {top: 18vw; opacity: 0;}
-    100% {top: 14.1vw; opacity: 1;}
+    0% {bottom: 24vw; opacity: 0;}
+    100% {bottom: 22vw; opacity: 1;}
 }
 
 @keyframes slideUpInfo{
-    0% {top: 31vw; opacity: 0;}
-    100% {top: 28.53vw; opacity: 1;}
+    0% {bottom: 15vw; opacity: 0;}
+    100% {bottom: 14vw; opacity: 1;}
 }
 
 @keyframes fadeIn{

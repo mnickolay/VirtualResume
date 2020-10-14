@@ -39,11 +39,7 @@ function objAddEventListeners(obj){
         resTHead.innerHTML="";
         resTBody.innerHTML="";
         resTHead.innerHTML = objSettingTableHeader(obj);
-        
-        var tableBodyFill = "<tr>";
-        tableBodyFill += objSettingTableFillArr(obj);
-        tableBodyFill += '</tr>';
-        resTBody.innerHTML += tableBodyFill;
+        resTBody.innerHTML += objSettingTableFillArr(obj);
     });
 }
 
@@ -53,7 +49,7 @@ function objSettingTableHeader(obj){
         thisTableFill += '<th id="thDate">' + obj.date + '</th></tr>';
     }
     if(obj.title != null){
-        thisTableFill += '<tr><th id="thTitle">' + obj.title + '</th>'
+        thisTableFill += '<tr><th id="thTitle">' + obj.title + '</th><th></th>'
     }
     thisTableFill += '</tr>';
     return thisTableFill;
@@ -62,12 +58,9 @@ function objSettingTableHeader(obj){
 function objSettingTableFillArr(obj){
     var thisTableFill = "";
     for(var i=0; i<obj.arr.length; i++){
-        thisTableFill += '<td';
-        if(i%2!=0) thisTableFill += ' id="tdRight"'
-        thisTableFill += '>' + obj.arr[i] + '</td>';
-        if(i%2!=0 && i!=0) thisTableFill += '</tr><tr>';
+        thisTableFill += '<tr><td>';
+        thisTableFill += obj.arr[i] + '</td></tr>';
     }
-    if(obj.arr.length%2!=0) thisTableFill += '<td></td>'
     return thisTableFill;
 }
 

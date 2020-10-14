@@ -114,16 +114,17 @@ function showTextDetail(obj){
 }
 
 function textShowAnimation(width){
-    textHide1.style.width = "0.25vw"
+    textHide1.style.width = "0.1vw"
     textHide1.style.left = (width+10.25) + "vw";
+    textHide2.style.left = (width+10.25) + "vw"
     textHide2.style.width = "0vw"
-    textHide2.style.right = (90-width) + "vw"
 }
 
 function textHideAnimation(){
-    textHide1.style.width = "0.25vw"
+    textHide2.classList.remove("transitionDelay")
     textHide1.style.left = "10vw"
-    textHide2.style.width = (width+10.25) + "vw"
+    textHide2.style.left = "10vw"
+    textHide2.style.width = "42vw"
 }
 
 function checkForActive(){

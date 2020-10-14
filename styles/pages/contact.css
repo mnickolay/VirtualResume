@@ -13,27 +13,29 @@
     top: 26vw;
     left: 10vw;
     font-size: 2vw;
-    z-index: -1;
 }
 
 .textHide{
     position: absolute;
     top: 26vw;
     height: 3vw;
+    z-index: 5;
 }
 
 #textHide1{
     left: 10vw;
     width: 0vw;
     background-color: #212529;
-    transition: left 1s ease;
+    transition: left 1s ease,
+                width 1s ease;
 }
 
 #textHide2{
-    right: 48vw;
+    left: 10vw;
     width: 42vw;
     background-color: #f0f0f0;
-    transition: width 1s ease;
+    transition: left 1s ease,
+                width 1s ease;
 }
 
 #blinkBar{

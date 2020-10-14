@@ -4,6 +4,8 @@ const resumeDesign =
         <div class="resumeBoxBody"></div>
         <table>
             <thead id="resTHead"></thead>
+        </table>
+        <table>
             <tbody id="resTBody"></tbody>
         </table>
     </div>

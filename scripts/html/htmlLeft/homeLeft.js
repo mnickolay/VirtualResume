@@ -1,5 +1,5 @@
 const homeDesign = 
 `
-<img src="./images/self.jpg" alt="" id="homeImage">
+<img src="./images/selfBW.png" alt="" id="homeImage">
 <div id="imageBar1" class="imageBar"></div>
 `;

@@ -8,7 +8,7 @@
 }
 
 #resumeHeader{
-    font-size: 2.75vw;
+    font-size: 36px;
     padding-bottom: 0.5em;
     animation: headSlideLeft 1s ease,
                 fadeIn 1s ease;;
@@ -16,7 +16,7 @@
 
 .resHeader{
     margin-bottom: 0;
-    font-size: 1.5vw;
+    font-size: 24px;
     margin-left: 1vw;
     animation: h4slideLeft 1s ease;
 }
@@ -25,7 +25,7 @@
     position: absolute;
     top: 3vw;
     left: 50vw;
-    height: 4vw;
+    height: 54px;
     width: 0.5vw;
     background-color: #775a00;
     animation: barSlide .8s ease;
@@ -34,7 +34,7 @@
 .resH5{
     width: max-content;
     font-weight: 300;
-    font-size: 1.1vw;
+    font-size: 16px;
     margin: 1vw 0vw;
     transition: all 0.25s ease;
     animation: h5slideLeft 1s ease;
@@ -74,7 +74,7 @@ table{
 
 th{
     width: 30vw;
-    font-size: 1.5vw;
+    font-size: 24px;
 }
 
 thead{
@@ -82,11 +82,11 @@ thead{
 }
 
 #thTitle{
-    font-size: 0.9vw;
+    font-size: 14px;
 }
 
 tbody{
-    font-size: 0.95vw;
+    font-size: 0.94vw;
 }
 
 tbody tr:nth-child(even) {
@@ -94,7 +94,8 @@ tbody tr:nth-child(even) {
 }
 
 td{
-    vertical-align: top;
+    width: 100em;
+    padding-bottom: 7px;
 }
 
 #tdRight{

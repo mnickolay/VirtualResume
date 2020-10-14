@@ -3,7 +3,6 @@ html, body{
     max-height: fit-content;
     padding: 0;
     margin: 0;
-    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     font-family: 'Overpass100';
     overflow: hidden;
     background-color: #f0f0f0;
@@ -37,11 +36,10 @@ html, body{
 #rightColor{
     position: absolute;
     top: 0;
-    height: 100vw;
-    min-height: 1000px;
+    height: 1000px;
     transform: skew(-20deg);
     width: 50vw;
-    right: -30vw;
+    right: -37vw;
     background-color: #0534cf;
     z-index: -1;
     transition: all 1s ease;

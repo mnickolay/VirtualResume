@@ -6,7 +6,7 @@
     height: 100%;
 } */
 
-.logoMain{
+.logoParent{
     position: absolute;
     left: 3vw;
     top: 3vw;
@@ -14,7 +14,7 @@
     height: 5.5vw;
     text-decoration: none;
     text-align: center;
-    line-height: 5.25vw;
+    /* line-height: 5.25vw; */
     font-size: 2vw;
     font-family: 'Raleway';
     border-radius: 15px;
@@ -22,26 +22,42 @@
                 background-color 1s linear,
                 border-color 1s linear,
                 color 0.2s linear,
-                width 0.6s ease,
-                height 0.6s ease;
+                width 0.3s ease,
+                height 0.3s ease;
     color: black;
     border: black 1px solid;
     z-index: 2;
 }
 
-.logoMain:hover{
+.logoParent:hover{
     text-decoration: none;
     color: white;
     width: 18vw;
     height: 12vw;
-    line-height: 1.5vw;
+    z-index: 5;
 }
 
-#logoSmile{
+.logoMain{
+    opacity: 1;
+    position: absolute;
+    top: 1vw;
+    left: 1vw;
+    transition: 0.3s opacity ease;
+}
+
+.logoSmile{
+    opacity: 0;
+    position: absolute;
+    top: 1.6vw;
+    left: 1.6vw;
     size: 2px;
     display: block;
+    transition: 0.3s opacity ease;
 }
 
 #logoText{
+    padding-top: 1vw;
+    text-decoration: none;
+    text-align: center;
     font-size: 1vw;
 }

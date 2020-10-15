@@ -1,23 +1,27 @@
 var logoTimer;
 
-logoMain.addEventListener("mouseenter", () =>{
-    logoMain.style.backgroundColor = currentColor;
-    logoMain.style.borderColor = currentColor;
-    logoTimer = setTimeout(() => {
-        let logoText = getLogoText()
-        logoMain.innerHTML = logoTextObj.smile + logoText
-    }, 600)
+logoParent.addEventListener("mouseenter", () =>{
+    logoParent.style.backgroundColor = currentColor;
+    logoParent.style.borderColor = currentColor;
+    logoTextObj.smile.style.opacity = "1"
+    logoTextObj.mn.style.opacity = "0"
+
+    // logoTimer = setTimeout(function(){
+    //     let logoText = getLogoText()
+    //     logoParent.innerHTML += logoText
+    // }, 600)
 })
 
-logoMain.addEventListener("mouseleave", () =>{
+logoParent.addEventListener("mouseleave", () =>{
     clearTimeout(logoTimer);
-    logoMain.style.backgroundColor = "transparent";
-    logoMain.style.borderColor = "black";
-    logoMain.innerText = logoTextObj.mn
+    logoParent.style.backgroundColor = "transparent";
+    logoParent.style.borderColor = "black";
+    logoTextObj.smile.style.opacity = "0"
+    logoTextObj.mn.style.opacity = "1"
 })
 
 setInterval(function(){
-    cssBorderRadius(logoMain);
+    cssBorderRadius(logoParent);
 }, 300);
 
 function getLogoText(){

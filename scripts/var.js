@@ -48,11 +48,11 @@ var workObj;
 var contactObjArr;
 
 //logo
-var logoMain = document.querySelector(".logoMain");
+var logoParent = document.querySelector(".logoParent");
 var borderString = "";
 var logoTextObj = {
-    mn: "MN",
-    smile: "<span id='logoSmile'><i class='far fa-smile fa-sm'></i></span>",
+    mn: document.querySelector(".logoMain"),
+    smile: document.querySelector(".logoSmile"),
     home: "You can hover over me on each page to get details about the page!",
     resume: "resume",
     about: "about",

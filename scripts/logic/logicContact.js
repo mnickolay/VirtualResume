@@ -141,12 +141,12 @@ function setContactObjects(){
     var linkedinObj = {
         ele: linkedinDiv = document.querySelector("#linkedinDiv"),
         text: "LinkedIn",
-        fill: "https://www.linkedin.com/in/matthew-nickolay/"
+        fill: "<a target='_blank' rel='noopener noreferrer' href='https://www.linkedin.com/in/matthew-nickolay/'>https://www.linkedin.com/in/matthew-nickolay/</a>"
     };
     var githubObj = {
         ele: githubDiv = document.querySelector("#githubDiv"),
         text: "GitHub",
-        fill: "https://github.com/mnickolay"
+        fill: "<a target='_blank' rel='noopener noreferrer' href='https://github.com/mnickolay'>https://github.com/mnickolay</a>"
     };
     var emailObj = {
         ele: emailDiv = document.querySelector("#emailDiv"),

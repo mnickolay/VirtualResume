@@ -43,7 +43,8 @@ html, body{
     right: -37vw;
     background-color: #0534cf;
     z-index: -1;
-    transition: all 1s ease;
+    transition: transform 1s ease,
+                background-color 1s ease;
 }
 
 .rightHTML{

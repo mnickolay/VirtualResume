@@ -1,16 +1,32 @@
+var logoTimer;
+
 logoMain.addEventListener("mouseenter", () =>{
     logoMain.style.backgroundColor = currentColor;
     logoMain.style.borderColor = currentColor;
+    logoTimer = setTimeout(() => {
+        let logoText = getLogoText()
+        logoMain.innerHTML = logoTextObj.smile + logoText
+    }, 600)
 })
 
 logoMain.addEventListener("mouseleave", () =>{
+    clearTimeout(logoTimer);
     logoMain.style.backgroundColor = "transparent";
     logoMain.style.borderColor = "black";
+    logoMain.innerText = logoTextObj.mn
 })
 
 setInterval(function(){
     cssBorderRadius(logoMain);
 }, 300);
+
+function getLogoText(){
+    for(const [key, value] of Object.entries(logoTextObj)){
+        if(page == key)
+            return "<span id='logoText'>" + value + "</span>"
+    }
+    
+}
 
 function logoStyling(ele){
     ele.mouseenter(function(){

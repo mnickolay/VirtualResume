@@ -13,6 +13,15 @@
     top: 26vw;
     left: 10vw;
     font-size: 2vw;
+    color: #212529;
+}
+
+a{
+    color: #212529;
+}
+
+a:hover{
+    color: #212529;
 }
 
 .textHide{

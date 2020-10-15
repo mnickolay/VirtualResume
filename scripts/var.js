@@ -32,10 +32,6 @@ var bodyL = document.querySelector(".bodyLeft");
 var rightHTML = document.querySelector(".rightHTML");
 var leftHTML = document.querySelector(".leftHTML");
 
-//logo
-var logoMain = document.querySelector(".logoMain"),
-    borderString = "";
-
 //html
 const leftHTMLstr = '<div class="leftHTML"></div>';
 const rightHTMLstr = '<div class="rightHTML"></div>';
@@ -50,3 +46,15 @@ var workObj;
 
 //contact
 var contactObjArr;
+
+//logo
+var logoMain = document.querySelector(".logoMain");
+var borderString = "";
+var logoTextObj = {
+    mn: "MN",
+    smile: "<span id='logoSmile'><i class='far fa-smile fa-sm'></i></span>",
+    home: "You can hover over me on each page to get details about the page!",
+    resume: "resume",
+    about: "about",
+    contact: "contact"
+}

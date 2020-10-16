@@ -6,6 +6,12 @@
     height: 100%;
 } */
 
+/* .logoParent{
+    float: left;
+    padding-left: 3rem;
+    height: 100%;
+} */
+
 .logoParent{
     position: absolute;
     left: 3vw;

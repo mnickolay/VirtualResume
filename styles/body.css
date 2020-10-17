@@ -37,10 +37,10 @@ html, body{
     position: absolute;
     bottom: 0;
     min-height: max-content;
-    height: 100vw;
+    height: 100vh;
     transform: skew(-20deg);
-    width: 50vw;
-    right: -50vw;
+    width: 35vw;
+    right: -24vw;
     background-color: #0534cf;
     z-index: -1;
     transition: transform 1s ease,

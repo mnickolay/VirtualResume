@@ -19,7 +19,9 @@ var blinkerInterval;
 function contactLogic(){
     leftHTML.innerHTML = contactDesign;
     rightHTML.innerHTML = contactHTML;
-    rightColor.style.transform = "skew(-10deg)"
+    rightColor.style.transform = "skew(-10deg)";
+    logoTextObj.inner.innerHTML = logoTextObj.contact;
+    logoTextObj.page.innerText = "Contact";
 
     contactObjArr = setContactObjects();
 
@@ -108,8 +110,7 @@ function finishRemoval(obj){
 
 function showTextDetail(obj){
     inputFieldDetail.innerHTML = obj.fill;
-    width = inputFieldDetail.clientWidth;
-    width = width/window.innerWidth * 100
+    width = (inputFieldDetail.clientWidth/window.innerWidth) * 100;
     textShowAnimation(width)
 }
 

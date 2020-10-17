@@ -1,15 +1,21 @@
+window.onload = start()
+
+function start(){
+    currentColor = blue;
+    rightColor.style.backgroundColor = blue;
+    page = "home";
+    navCircle1.classList.add("navActive");
+    homeLogic();
+}
+
 function pageScrollNavClick(clr, pg, cir){
     rightColor.style.backgroundColor = clr;
     currentColor = clr;
     page = pg;
     removeActive();
-    addActive(cir);
+    cir.classList.add("navActive");
     findLogicSwitch();
 }
-
-function addActive(cir){
-    cir.classList.add("navActive");
-};
 
 function removeActive(){
     navCircleArr.forEach(function(cir){

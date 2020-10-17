@@ -1,35 +1,44 @@
 var logoTimer;
+var logoIntervalArr = [];
 
 logoParent.addEventListener("mouseenter", () =>{
-    logoParent.style.backgroundColor = currentColor;
-    logoParent.style.borderColor = currentColor;
-    logoTextObj.smile.style.opacity = "1"
-    logoTextObj.mn.style.opacity = "0"
-
-    // logoTimer = setTimeout(function(){
-    //     let logoText = getLogoText()
-    //     logoParent.innerHTML += logoText
-    // }, 600)
+    logoIntervalArr.push(logoTimer = setInterval(() => {
+        logoParent.style.backgroundColor = currentColor;
+        logoParent.style.height = findLogoHeight() + "vw";
+    }, 100));
+    
+    logoParent.style.borderColor = "#f0f0f0";
+    logoTextObj.smile.style.opacity = "1";
+    logoTextObj.mn.style.opacity = "0";
+    logoTextObj.circle.style.border = "1px solid transparent";
 })
 
 logoParent.addEventListener("mouseleave", () =>{
-    clearTimeout(logoTimer);
+    // clearInterval(logoTimer)
+    logoIntervalArr.map((thisInt) => {
+        clearInterval(thisInt)
+        arr = []
+    })
     logoParent.style.backgroundColor = "transparent";
-    logoParent.style.borderColor = "black";
-    logoTextObj.smile.style.opacity = "0"
-    logoTextObj.mn.style.opacity = "1"
+    logoParent.style.borderColor = "transparent";
+    logoParent.style.height = "12vw";
+    logoTextObj.smile.style.opacity = "0";
+    logoTextObj.mn.style.opacity = "1";
+    logoTextObj.circle.style.border = "1px solid black";
 })
 
 setInterval(function(){
     cssBorderRadius(logoParent);
 }, 300);
 
-function getLogoText(){
-    for(const [key, value] of Object.entries(logoTextObj)){
-        if(page == key)
-            return "<span id='logoText'>" + value + "</span>"
-    }
-    
+function findLogoHeight(){
+    let count = 0;
+    let thisEle = logoTextObj.inner.childNodes;
+    thisEle.forEach((item) => {
+        count += item.clientHeight + (window.innerHeight/19)
+    })
+    count = (count/window.innerWidth) * 100
+    return count;
 }
 
 function logoStyling(ele){
@@ -63,8 +72,8 @@ function cssBorderRadius(ele){
 }
 
 function valueFinder(){
-    if(rng()) return "40px"
-    else return "10px"
+    if(rng()) return "30px"
+    else return "5px"
 }
 
 function rng(){

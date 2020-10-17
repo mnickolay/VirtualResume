@@ -1,7 +1,9 @@
 function resumeLogic(){
     leftHTML.innerHTML = resumeDesign;
     rightHTML.innerHTML = resumeHTML;
-    rightColor.style.transform = "skew(10deg)"
+    rightColor.style.transform = "skew(10deg)";
+    logoTextObj.inner.innerHTML = logoTextObj.resume;
+    logoTextObj.page.innerText = "Resume";
     setResumeVariables();
 
     var resTHead = document.querySelector("#resTHead");

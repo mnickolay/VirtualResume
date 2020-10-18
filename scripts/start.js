@@ -14,18 +14,18 @@ function appStart(){
 }
 
 function greaterThan900(){
-    starting = false
     width = window.innerWidth
     desktop.style.display = "inline"
     logoDiv.style.display = "inline"
     mobile.style.display = "none"
-    desktopStart()
+    if(starting) desktopStart()
+    starting = false
 }
 
 function lessThan900(){
-    starting = false
     width = window.innerWidth
     desktop.style.display = "none"
     logoDiv.style.display = "none"
     mobile.style.display = "inline"
+    starting = false
 }

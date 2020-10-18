@@ -1,6 +1,4 @@
-window.onload = start()
-
-function start(){
+function desktopStart(){
     currentColor = blue;
     rightColor.style.backgroundColor = blue;
     page = "home";

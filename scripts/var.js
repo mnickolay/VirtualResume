@@ -1,7 +1,8 @@
 //page
 var html = document.querySelector("html");
+var desktop = document.querySelector(".desktopDiv");
+var mobile = document.querySelector(".mobileDiv");
 var width = window.innerWidth;
-var height = window.innerHeight;
 
 //logic
 var pageLock = false;
@@ -48,6 +49,7 @@ var workObj;
 var contactObjArr;
 
 //logo
+var logoDiv = document.querySelector(".logoDiv");
 var logoParent = document.querySelector(".logoParent");
 var borderString = "";
 var logoTextObj = {

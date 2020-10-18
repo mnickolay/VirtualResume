@@ -1,4 +1,5 @@
 var logoTimer;
+var logoBubble;
 var logoIntervalArr = [];
 
 logoParent.addEventListener("mouseenter", () =>{
@@ -6,6 +7,10 @@ logoParent.addEventListener("mouseenter", () =>{
         logoParent.style.backgroundColor = currentColor;
         logoParent.style.height = findLogoHeight() + "vw";
     }, 100));
+
+    logoIntervalArr.push(logoBubble = setInterval(() => {
+        cssBorderRadius(logoParent);
+    }, 300))
     
     logoParent.style.borderColor = "#f0f0f0";
     logoTextObj.smile.style.opacity = "1";
@@ -14,7 +19,6 @@ logoParent.addEventListener("mouseenter", () =>{
 })
 
 logoParent.addEventListener("mouseleave", () =>{
-    // clearInterval(logoTimer)
     logoIntervalArr.map((thisInt) => {
         clearInterval(thisInt)
         arr = []
@@ -27,15 +31,13 @@ logoParent.addEventListener("mouseleave", () =>{
     logoTextObj.circle.style.border = "1px solid black";
 })
 
-setInterval(function(){
-    cssBorderRadius(logoParent);
-}, 300);
+
 
 function findLogoHeight(){
     let count = 0;
     let thisEle = logoTextObj.inner.childNodes;
     thisEle.forEach((item) => {
-        count += item.clientHeight + (window.innerHeight/19)
+        count += item.clientHeight + (window.innerHeight/18)
     })
     count = (count/window.innerWidth) * 100
     return count;

@@ -1,7 +1,7 @@
 //main desktop
 function aboutLogic(){
-    bodyL.innerHTML = aboutDesign;
-    bodyR.innerHTML = aboutHTML;
+    bodyL.innerHTML = aboutLeft;
+    bodyR.innerHTML = aboutRight;
     colorBar.style.transform = "skew(0deg)"
     logoTextObj.inner.innerHTML = logoTextObj.about;
     logoTextObj.page.innerText = "About";
@@ -11,5 +11,5 @@ function aboutLogic(){
 //main mobile
 function mobileAboutLogic(){
     mobileLogoPage.innerText = "About"
-    mobileLogoInner.innerHTML = logoTextObj.about
+    mobileLogoInner.innerHTML = mobileLogoTextObj.about
 }

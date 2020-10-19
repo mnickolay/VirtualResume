@@ -14,23 +14,25 @@
           crossorigin="anonymous"/>
           
     <!-- styling -->
-    <link rel="stylesheet" href="styles/logo.css">
-    <link rel="stylesheet" href="styles/body.css">
-    <link rel="stylesheet" href="styles/nav.css">
-    <link rel="stylesheet" href="styles/circles.css">
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/desktop/logo.css">
+    <link rel="stylesheet" href="styles/desktop/body.css">
+    <link rel="stylesheet" href="styles/desktop/nav.css">
+    <link rel="stylesheet" href="styles/desktop/circles.css">
 
     <!-- mobile -->
     <link rel="stylesheet" href="styles/mobile/navbar.css">
+    <link rel="stylesheet" href="styles/mobile/logo.css">
     <link rel="stylesheet" href="styles/mobile/home.css">
     <link rel="stylesheet" href="styles/mobile/resume.css">
     <link rel="stylesheet" href="styles/mobile/about.css">
     <link rel="stylesheet" href="styles/mobile/contact.css">
 
     <!-- pages -->
-    <link rel="stylesheet" href="styles/pages/home.css">
-    <link rel="stylesheet" href="styles/pages/resume.css">
-    <link rel="stylesheet" href="styles/pages/about.css">
-    <link rel="stylesheet" href="styles/pages/contact.css">
+    <link rel="stylesheet" href="styles/desktop/pages/home.css">
+    <link rel="stylesheet" href="styles/desktop/pages/resume.css">
+    <link rel="stylesheet" href="styles/desktop/pages/about.css">
+    <link rel="stylesheet" href="styles/desktop/pages/contact.css">
 </head>
 <body>
 
@@ -74,7 +76,6 @@
         <div class="mobileColorBar">
             <div class="mobileLogoParent">
                 <span class="mobileLogoMain">MN</span>
-                <i class='mobileLogoSmile far fa-smile fa-md'></i>
             </div>
 
             <span class="mobileNavCircle mobileNavActive" id="mobileNavCircle1"></span>
@@ -88,8 +89,11 @@
     <div class="mobileBody">
         
     </div>
-    <div class="mobileDisplay">
-
+    <div class="mobileDisplay" style="display: none;">
+        <div class="mobileDisplayFill"></div>
+        <div class="mobileDisplayX"><i class="fas fa-times-circle fa-lg"></i></div>
+        <div class="mobileDisplayPrev"><i class="fas fa-angle-left fa-lg"></i></div>
+        <div class="mobileDisplayNext"><i class="fas fa-angle-right fa-lg"></i></div>
     </div>
 </div>
 
@@ -100,17 +104,17 @@
 <script src="scripts/navigation.js"></script>
 <script src="scripts/circles.js"></script>
 
-<!-- htmlRight scripts -->
-<script src="scripts/html/htmlRight/homeRight.js"></script>
-<script src="scripts/html/htmlRight/resumeRight.js"></script>
-<script src="scripts/html/htmlRight/aboutRight.js"></script>
-<script src="scripts/html/htmlRight/contactRight.js"></script>
+<!-- desktop html scripts -->
+<script src="scripts/html/desktop/homeHTML.js"></script>
+<script src="scripts/html/desktop/resumeHTML.js"></script>
+<script src="scripts/html/desktop/aboutHTML.js"></script>
+<script src="scripts/html/desktop/contactHTML.js"></script>
 
-<!-- htmlLeft scripts -->
-<script src="scripts/html/htmlLeft/homeLeft.js"></script>
-<script src="scripts/html/htmlLeft/resumeLeft.js"></script>
-<script src="scripts/html/htmlLeft/aboutLeft.js"></script>
-<script src="scripts/html/htmlLeft/contactLeft.js"></script>
+<!-- mobile html scripts -->
+<script src="scripts/html/mobile/homeHTML.js"></script>
+<script src="scripts/html/mobile/resumeHTML.js"></script>
+<script src="scripts/html/mobile/aboutHTML.js"></script>
+<script src="scripts/html/mobile/contactHTML.js"></script>
 
 <!-- logic scripts -->
 <script src="scripts/logic/logicHome.js"></script>

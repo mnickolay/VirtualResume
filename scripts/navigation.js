@@ -20,22 +20,22 @@ navCircle4.addEventListener("click", function(){
 });
 
 mobileNavCircle1.addEventListener("click", function(){
-    if(!this.classList.contains("navActive"))
+    if(!this.classList.contains("mobileNavActive"))
             pageScrollNavClick(blue, "home", this);
 });
 
 mobileNavCircle2.addEventListener("click", function(){
-    if(!this.classList.contains("navActive"))
+    if(!this.classList.contains("mobileNavActive"))
         pageScrollNavClick(yellow, "resume", this);
 });
 
 mobileNavCircle3.addEventListener("click", function(){
-    if(!this.classList.contains("navActive"))
+    if(!this.classList.contains("mobileNavActive"))
             pageScrollNavClick(pink, "about", this);
 });
 
 mobileNavCircle4.addEventListener("click", function(){
-    if(!this.classList.contains("navActive"))
+    if(!this.classList.contains("mobileNavActive"))
             pageScrollNavClick(green, "contact", this);
 });
 

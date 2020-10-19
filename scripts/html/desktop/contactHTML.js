@@ -1,6 +1,12 @@
-const contactHTML =
-`
-<div class="contactDiv">
+const contactLeft = 
+`<div id="blinkBar"></div>
+<div id="inputField"></div>
+<div class="textHide" id="textHide2"></div>
+<div class="textHide" id="textHide1"></div>
+<div id="inputFieldDetail"><span id="lengthFinder"></span></div>`
+
+const contactRight =
+`<div class="contactDiv">
     <div  class="innerDiv" id="linkedinDiv">
         <img class="contactImg" src="./images/linkedin.png"></img>
         <div class="contactText" id="linkedinText">LinkedIn</div>
@@ -17,5 +23,4 @@ const contactHTML =
         <img class="contactImg" src="./images/phone.png"></img>
         <div class="contactText" id="phoneText">Phone</div>
     </div>
-</div>
-`
+</div>`

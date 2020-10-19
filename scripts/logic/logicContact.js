@@ -18,8 +18,8 @@ var blinkerInterval;
 
 //main desktop
 function contactLogic(){
-    leftHTML.innerHTML = contactDesign;
-    rightHTML.innerHTML = contactHTML;
+    leftHTML.innerHTML = contactLeft;
+    rightHTML.innerHTML = contactRight;
     colorBar.style.transform = "skew(9deg)";
     logoTextObj.inner.innerHTML = logoTextObj.contact;
     logoTextObj.page.innerText = "Contact";
@@ -55,7 +55,7 @@ function contactLogic(){
 //main mobile
 function mobileContactLogic(){
     mobileLogoPage.innerText = "Contact"
-    mobileLogoInner.innerHTML = logoTextObj.contact
+    mobileLogoInner.innerHTML = mobileLogoTextObj.contact
 }
 
 function clearTextIntervals(){

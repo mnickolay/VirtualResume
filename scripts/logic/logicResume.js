@@ -1,7 +1,7 @@
 //main desktop
 function resumeLogic(){
-    leftHTML.innerHTML = resumeDesign;
-    rightHTML.innerHTML = resumeHTML;
+    leftHTML.innerHTML = resumeLeft;
+    rightHTML.innerHTML = resumeRight;
     colorBar.style.transform = "skew(-7deg)";
     logoTextObj.inner.innerHTML = logoTextObj.resume;
     logoTextObj.page.innerText = "Resume";
@@ -25,8 +25,25 @@ function resumeLogic(){
 
 //main mobile
 function mobileResumeLogic(){
+    mobileBody.innerHTML = mobileResumeBody
+    document.querySelector(".mobileResumeDiv").addEventListener("mouseup", () =>{
+        mobileDisplay.style.display == "" ? mobileDisplay.style.display = "none" : mobileDisplay.style.display = ""
+    })
+
+    mobileDisplayX.addEventListener("mouseup", () => {
+        mobileDisplay.style.display == "" ? mobileDisplay.style.display = "none" : mobileDisplay.style.display = ""
+    })
+
+    mobileDisplayPrev.addEventListener("mouseup", () => {
+        alert("prev")
+    })
+
+    mobileDisplayNext.addEventListener("mouseup", () => {
+        alert("next")
+    })
+
     mobileLogoPage.innerText = "Resume"
-    mobileLogoInner.innerHTML = logoTextObj.resume
+    mobileLogoInner.innerHTML = mobileLogoTextObj.resume
 }
 
 function objRemoveActiveClass(){

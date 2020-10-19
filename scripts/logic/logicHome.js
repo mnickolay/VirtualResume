@@ -1,7 +1,7 @@
 //main desktop
 function homeLogic(){
-    bodyL.innerHTML = homeDesign;
-    rightHTML.innerHTML = homeHTML;
+    bodyL.innerHTML = homeLeft;
+    rightHTML.innerHTML = homeRight;
     colorBar.style.transform = "skew(-20deg)"
     logoTextObj.inner.innerHTML = logoTextObj.home
     logoTextObj.page.innerText = "Home";
@@ -9,6 +9,7 @@ function homeLogic(){
 
 //main mobile
 function mobileHomeLogic(){
+    mobileBody.innerHTML = mobileHomeHTML
     mobileLogoPage.innerText = "Home"
-    mobileLogoInner.innerHTML = logoTextObj.home
+    mobileLogoInner.innerHTML = mobileLogoTextObj.home
 }

@@ -1,6 +1,7 @@
-const aboutHTML =
-`
-<div class="shape"></div>
+const aboutLeft = '<svg height="100vh" width="100vw" id="svgCircles"></svg>';
+
+const aboutRight =
+`<div class="shape"></div>
 <div class="aboutDiv">    
     <div class="aboutHeader">
         <div id="aboutHeaderSide"></div>

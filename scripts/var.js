@@ -5,11 +5,12 @@ var mobile = document.querySelector(".mobileDiv");
 var width = window.innerWidth;
 
 //mobile
-var mobileLogoParent = document.querySelector(".mobileLogoParent");
 var mobileNav = document.querySelector(".mobileNav");
 var mobileBody = document.querySelector(".mobileBody");
-var mobileDisplay = document.querySelector(".mobileDisplay");
 var mobileColorBar = document.querySelector(".mobileColorBar");
+var mobileLogoParent = document.querySelector(".mobileLogoParent");
+var mobileLogoMain = document.querySelector(".mobileLogoMain");
+var mobileLogoSmile = document.querySelector(".mobileLogoSmile");
 var mobileLogoPage = document.querySelector(".mobileLogoPage");
 var mobileLogoInner = document.querySelector(".mobileLogoInner");
 var displayingMobile = false;
@@ -61,6 +62,13 @@ var skillsObj;
 var educationObj;
 var workObj;
 
+//mobile resume
+var mobileDisplay = document.querySelector(".mobileDisplay");
+var mobileDisplayFill = document.querySelector(".mobileDisplayFill");
+var mobileDisplayX = document.querySelector(".mobileDisplayX");
+var mobileDisplayPrev = document.querySelector(".mobileDisplayPrev");
+var mobileDisplayNext = document.querySelector(".mobileDisplayNext");
+
 //contact
 var contactObjArr;
 
@@ -86,5 +94,20 @@ var logoTextObj = {
            "<p>They each follow the mouse at a different rate.</p>",
     contact: "<p>This contact page runs similarily to the resume page with each object having a HTML element, title, and information.</p>" +
              "<p>Hovering over an element will begin an interval to write out the title and push the blinker a set amount.</p>" +
+             "<p>Once typed, the information is show by setting the width of a white bar to 0 and left position of a bar to the text's length over one second.</p>"
+}
+
+var mobileLogoTextObj = {
+    home: "<p>You can click on me on each page to get details about the page!</p>" +
+          "<p>This website was built by me using only HTML, CSS, and JavaScipt— no jQuery or BootStrap!</p>" +
+          "<p>Animations use the @keyframes CSS rule.</p>" +
+          "<p>Everything runs off of one HTML page and is updated when a new page is requested upon a click on the nav.</p>" +
+          "<p>While the mobile site has some variance to the desktop, the site was built and inteded for desktop use.</p>",
+    resume: "<p>The resume categories can be clicked to show details.</p>" +
+            "<p>The information is populated with a JS object based on the clicked element.</p>" +
+            "<p>Each object has an HTML element, a title, and an array of information for the lower table.</p>",
+    about: "<p>The desktop version of this site has circles on display that are randomly generated. Go check it out!</p>",
+    contact: "<p>This contact page runs similarily to the resume page with each object having a HTML element, title, and information.</p>" +
+             "<p>Clicking on an element will begin an interval to write out the title and push the blinker a set amount.</p>" +
              "<p>Once typed, the information is show by setting the width of a white bar to 0 and left position of a bar to the text's length over one second.</p>"
 }

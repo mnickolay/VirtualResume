@@ -1,6 +1,8 @@
-const homeHTML = 
-`
-<div class="designBar" id="homeDesignBar1"></div>
+const homeLeft = 
+`<img src="./images/selfBW.png" alt="" id="homeImage">`
+
+const homeRight = 
+`<div class="designBar" id="homeDesignBar1"></div>
 <div class="designBar" id="homeDesignBar2"></div>
 <div class="designBar" id="homeDesignBar3"></div>
 <div class="designBar" id="homeDesignBar4"></div>
@@ -14,5 +16,4 @@ const homeHTML =
         <div class="infoWebDisplay">&lt;Web Development&gt;</div>
         <div class="infoProgrammingDisplay">//Programming</div>
     </div>
-</div>
-`
+</div>`

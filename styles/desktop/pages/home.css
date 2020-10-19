@@ -8,15 +8,6 @@
     z-index: -3;
 }
 
-.imageBar{
-    position: absolute;
-    bottom: 0vw;
-    left: 0vw;
-    height: 10vw;
-    width: 100vw;
-    z-index: -2;
-}
-
 .nameDisplay{
     position: absolute;
     bottom: 22vw;

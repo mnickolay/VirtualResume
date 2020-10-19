@@ -35,11 +35,11 @@ logoParent.addEventListener("mouseleave", () =>{
 mobileLogoParent.addEventListener('mouseup', () => {
     if(mobileNavToggle){
         mobileColorBar.style.height = "9%"
-        mobileColorBar.style.boxShadow = ""
+        mobileLogoMain.innerText = "MN"
         mobileNavToggle = false
     }else{
         mobileColorBar.style.height = "90%"
-        mobileColorBar.style.boxShadow = "0px -4px 20px 1px #888888"
+        mobileLogoMain.innerText = "X"
         mobileNavToggle = true;
     } 
 })

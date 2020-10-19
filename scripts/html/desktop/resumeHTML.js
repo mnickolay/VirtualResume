@@ -1,6 +1,18 @@
-const resumeHTML = 
-`
-<div class="resumeBar"></div>
+const resumeLeft =
+`<div class="resumeDesignDiv">
+    <div class="resumeBox">
+        <div class="resumeBoxBody"></div>
+        <table>
+            <thead id="resTHead"></thead>
+        </table>
+        <table>
+            <tbody id="resTBody"></tbody>
+        </table>
+    </div>
+</div>`
+
+const resumeRight = 
+`<div class="resumeBar"></div>
 <div class="resumeDiv">
     <div id="resumeHeader">Resume</div>
     <div id="skills">

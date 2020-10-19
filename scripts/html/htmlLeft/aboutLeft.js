@@ -1,1 +1,0 @@
-const aboutDesign = '<svg height="100vh" width="100vw" id="svgCircles"></svg>';

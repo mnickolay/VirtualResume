@@ -45,12 +45,12 @@
 
 .aboutBody{
     position: relative;
-    margin-top: 20px;
+    margin-top: 1vw;
     animation: fadeSlideBody 1s ease;
 }
 
 .aboutBodyPara{
-    font-size: 1vw;
+    font-size: 1.05vw;
     font-family: 'Overpass200';
     font-weight: 500;
     text-align: justify;
@@ -80,8 +80,8 @@
 }
 
 @keyframes fadeSlideBody{
-    0% {opacity: 0; margin-top: 10px;}
-    100% {opacity: 1; margin-top: 20px;}
+    0% {opacity: 0; margin-top: 0.2vw;}
+    100% {opacity: 1; margin-top: 1vw;}
 }
 
 @keyframes sideSlide{

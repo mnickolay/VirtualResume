@@ -1,4 +1,5 @@
 var starting = true;
+setViews(); 
 appStart();
 
 window.onresize = appStart;
@@ -28,4 +29,10 @@ function lessThan900(){
     logoDiv.style.display = "none"
     mobile.style.display = "inline"
     starting = false
+}
+
+function setViews(){
+    desktopStart();
+    mobile.style.display = "none"
+    desktop.style.display = "none"
 }

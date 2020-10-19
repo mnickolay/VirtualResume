@@ -19,7 +19,7 @@ var blinkerInterval;
 function contactLogic(){
     leftHTML.innerHTML = contactDesign;
     rightHTML.innerHTML = contactHTML;
-    rightColor.style.transform = "skew(-10deg)";
+    colorBar.style.transform = "skew(9deg)";
     logoTextObj.inner.innerHTML = logoTextObj.contact;
     logoTextObj.page.innerText = "Contact";
 

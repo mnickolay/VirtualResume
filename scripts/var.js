@@ -1,7 +1,16 @@
 //page
 var html = document.querySelector("html");
+var desktop = document.querySelector(".desktopDiv");
+var mobile = document.querySelector(".mobileDiv");
 var width = window.innerWidth;
-var height = window.innerHeight;
+
+//mobile
+var logoDivMobile = document.querySelector(".logoDivMobile");
+var mobileNav = document.querySelector(".mobileNav");
+var mobileBody = document.querySelector(".mobileBody");
+var mobileDisplay = document.querySelector(".mobileDisplay");
+var mobileColorBar = document.querySelector(".mobileColorBar");
+var displayingMobile = false;
 
 //logic
 var pageLock = false;
@@ -17,6 +26,11 @@ var navCircle1 = document.querySelector("#navCircle1"),
     navCircle3 = document.querySelector("#navCircle3"),
     navCircle4 = document.querySelector("#navCircle4");
 var navCircleArr = [navCircle1,navCircle2,navCircle3,navCircle4];
+var mobileNavCircle1 = document.querySelector("#mobileNavCircle1"),
+    mobileNavCircle2 = document.querySelector("#mobileNavCircle2"),
+    mobileNavCircle3 = document.querySelector("#mobileNavCircle3"),
+    mobileNavCircle4 = document.querySelector("#mobileNavCircle4");
+var mobileNavCircleArr = [mobileNavCircle1,mobileNavCircle2,mobileNavCircle3,mobileNavCircle4];
 
 //colors
 var currentColor = "#0000ff";
@@ -26,7 +40,7 @@ const green = "#009659";
 const pink = "#ffb6bd";
 
 //body
-var rightColor = document.querySelector("#rightColor")
+var colorBar = document.querySelector("#rightColor")
 var bodyR = document.querySelector(".bodyRight");
 var bodyL = document.querySelector(".bodyLeft");
 var rightHTML = document.querySelector(".rightHTML");
@@ -48,6 +62,7 @@ var workObj;
 var contactObjArr;
 
 //logo
+var logoDiv = document.querySelector(".logoDiv");
 var logoParent = document.querySelector(".logoParent");
 var borderString = "";
 var logoTextObj = {

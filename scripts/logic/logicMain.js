@@ -1,42 +1,79 @@
-window.onload = start()
-
-function start(){
+function desktopStart(){
     currentColor = blue;
-    rightColor.style.backgroundColor = blue;
+    colorBar.style.backgroundColor = currentColor;
+    mobileColorBar.style.backgroundColor = currentColor;
     page = "home";
     navCircle1.classList.add("navActive");
+    mobileNavCircle1.classList.add("mobileNavActive");
     homeLogic();
 }
 
 function pageScrollNavClick(clr, pg, cir){
-    rightColor.style.backgroundColor = clr;
     currentColor = clr;
     page = pg;
+    colorBar.style.backgroundColor = currentColor;
+    mobileColorBar.style.backgroundColor = currentColor;
     removeActive();
-    cir.classList.add("navActive");
+    addActive(cir);
     findLogicSwitch();
+}
+
+function addActive(circle){
+    let thisMobile = false;
+    let navNum = 1;
+
+    if(circle.id.includes("mobile")){
+        circle.classList.add("mobileNavActive")
+        thisMobile = true
+    }else circle.classList.add("navActive")
+
+    for(var i=1; i<=4; i++){
+        if(circle.id.includes(i.toString())){
+            navNum = i;
+            break;
+        }
+    }
+
+    if(!thisMobile){
+        mobileNavCircleArr.forEach((nav) => {
+            if(nav.id.includes(navNum.toString()))
+                nav.classList.add("mobileNavActive")
+        })
+    }else{
+        navCircleArr.forEach((nav) => {
+            if(nav.id.includes(navNum.toString()))
+                nav.classList.add("navActive")
+        })
+    }
 }
 
 function removeActive(){
     navCircleArr.forEach(function(cir){
         cir.classList.remove("navActive");
     });
+    mobileNavCircleArr.forEach(function(cir){
+        cir.classList.remove("mobileNavActive");
+    });
 };
 
 function findLogicSwitch() {
-    resetRLHTML();
+    if(!displayingMobile) resetRLHTML();
     switch(page){
         case "home":
-            homeLogic();
+            if(displayingMobile) homeMobileLogic();
+            else homeLogic();
             break;
         case "resume":
-            resumeLogic();
+            if(displayingMobile) resumeMobileLogic();
+            else resumeLogic();
             break;
         case "about":
-            aboutLogic();
+            if(displayingMobile) aboutMobileLogic();
+            else aboutLogic();
             break;
         case "contact":
-            contactLogic();
+            if(displayingMobile) contactMobileLogic();
+            else contactLogic();
             break;
     }
 };

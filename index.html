@@ -19,6 +19,13 @@
     <link rel="stylesheet" href="styles/nav.css">
     <link rel="stylesheet" href="styles/circles.css">
 
+    <!-- mobile -->
+    <link rel="stylesheet" href="styles/mobile/navbar.css">
+    <link rel="stylesheet" href="styles/mobile/home.css">
+    <link rel="stylesheet" href="styles/mobile/resume.css">
+    <link rel="stylesheet" href="styles/mobile/about.css">
+    <link rel="stylesheet" href="styles/mobile/contact.css">
+
     <!-- pages -->
     <link rel="stylesheet" href="styles/pages/home.css">
     <link rel="stylesheet" href="styles/pages/resume.css">
@@ -27,43 +34,67 @@
 </head>
 <body>
 
-<!-- desktop -->
-<div class="logoDiv">
-    <div class="logoParent">
-        <span class="logoCircle"></span>
-        <span class="logoMain">MN</span>
-        <i class='logoSmile far fa-smile fa-md'></i>
-        <span class="logoPage"></span>
-        <span class="logoInner"></span>
+<div class="desktopDiv">
+    <div class="logoDiv">
+        <div class="logoParent">
+            <span class="logoCircle"></span>
+            <span class="logoMain">MN</span>
+            <i class='logoSmile far fa-smile fa-md'></i>
+            <span class="logoPage"></span>
+            <span class="logoInner"></span>
+        </div>
+    </div>
+
+    <div class="websiteBody">
+        <div class="bodyLeft">
+            <div class="leftHTML"></div>
+        </div>
+        <div id="rightColor"></div>
+        <div class="bodyRight">
+            <div class="rightHTML"></div>
+        </div>
+
+        <span class="navCircle navActive" id="navCircle1">
+            <span class="navText" id="navHome"></span>
+        </span>
+        <span class="navCircle" id="navCircle2">
+            <span class="navText" id="navResume"></span>
+        </span>
+        <span class="navCircle" id="navCircle3">
+            <span class="navText" id="navAbout"></span>
+        </span>
+        <span class="navCircle" id="navCircle4">
+            <span class="navText" id="navContact"></span>
+        </span>
     </div>
 </div>
 
-<div class="websiteBody">
-    <div class="bodyLeft">
-        <div class="leftHTML"></div>
+<div class="mobileDiv">
+    <div class="logoDivMobile">
+        
     </div>
-    <div id="rightColor"></div>
-    <div class="bodyRight">
-        <div class="rightHTML"></div>
+    <div class="mobileNav">
+        <div class="mobileColorBar">
+            <span class="mobileNavCircle mobileNavActive" id="mobileNavCircle1">
+                
+            </span>
+            <span class="mobileNavCircle" id="mobileNavCircle2">
+                
+            </span>
+            <span class="mobileNavCircle" id="mobileNavCircle3">
+                
+            </span>
+            <span class="mobileNavCircle" id="mobileNavCircle4">
+                
+            </span>
+        </div>
     </div>
+    <div class="mobileBody">
+        
+    </div>
+    <div class="mobileDisplay">
 
-    <span class="navCircle navActive" id="navCircle1">
-        <span class="navText" id="navHome"></span>
-    </span>
-    <span class="navCircle" id="navCircle2">
-        <span class="navText" id="navResume"></span>
-    </span>
-    <span class="navCircle" id="navCircle3">
-        <span class="navText" id="navAbout"></span>
-    </span>
-    <span class="navCircle" id="navCircle4">
-        <span class="navText" id="navContact"></span>
-    </span>
-</div>
-
-<!-- mobile -->
-<div class="mobile">
-    
+    </div>
 </div>
 
 <!-- general scripts -->
@@ -91,6 +122,8 @@
 <script src="scripts/logic/logicAbout.js"></script>
 <script src="scripts/logic/logicContact.js"></script>
 <script src="scripts/logic/logicMain.js"></script>
+
+<script src="scripts/start.js"></script>
 
 </body>
 </html>

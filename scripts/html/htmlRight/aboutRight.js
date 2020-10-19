@@ -28,7 +28,6 @@ const aboutHTML =
         </span>
         <p class="aboutBodyPara">I am a Christian, a musician, and a husband.</p>
         <p class="aboutBodyPara">I enjoy learning new things, finding new music, spending time with friends and family, and of course coding.</p>
-        <br>
         <p class="aboutBodyPara">Thank you for visiting. I appreciate you taking time.</p>
     </div> 
 </div>`

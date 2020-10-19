@@ -19,6 +19,26 @@ navCircle4.addEventListener("click", function(){
             pageScrollNavClick(green, "contact", this);
 });
 
+mobileNavCircle1.addEventListener("click", function(){
+    if(!this.classList.contains("navActive"))
+            pageScrollNavClick(blue, "home", this);
+});
+
+mobileNavCircle2.addEventListener("click", function(){
+    if(!this.classList.contains("navActive"))
+        pageScrollNavClick(yellow, "resume", this);
+});
+
+mobileNavCircle3.addEventListener("click", function(){
+    if(!this.classList.contains("navActive"))
+            pageScrollNavClick(pink, "about", this);
+});
+
+mobileNavCircle4.addEventListener("click", function(){
+    if(!this.classList.contains("navActive"))
+            pageScrollNavClick(green, "contact", this);
+});
+
 //hover
 navCircle1.addEventListener("mouseenter", function(){
     this.children[0].innerText = "Home";
@@ -55,12 +75,16 @@ navCircle4.addEventListener("mouseleave", function(){
 
 //scroll
 window.addEventListener("wheel", function(event){
-    if(event.deltaY < 0) findNavSwitch("up")
-    else if(event.deltaY > 0) findNavSwitch("down")
+    if(!displayingMobile){
+        if(event.deltaY < 0) findNavSwitch("up")
+        else if(event.deltaY > 0) findNavSwitch("down")
+    }
 })
 
 //arrow
 document.onkeydown = function(event){
-    if(event.key === "ArrowDown") findNavSwitch("down")
-    else if(event.key === "ArrowUp") findNavSwitch("up")
+    if(!displayingMobile){
+        if(event.key === "ArrowDown") findNavSwitch("down")
+        else if(event.key === "ArrowUp") findNavSwitch("up")
+    }
 }

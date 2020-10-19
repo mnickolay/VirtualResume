@@ -39,7 +39,7 @@ html, body{
     min-height: max-content;
     height: 100vh;
     transform: skew(-20deg);
-    width: 35vw;
+    width: 40vw;
     right: -24vw;
     background-color: #0534cf;
     z-index: -1;

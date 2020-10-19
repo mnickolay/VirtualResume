@@ -5,11 +5,13 @@ var mobile = document.querySelector(".mobileDiv");
 var width = window.innerWidth;
 
 //mobile
-var logoDivMobile = document.querySelector(".logoDivMobile");
+var mobileLogoParent = document.querySelector(".mobileLogoParent");
 var mobileNav = document.querySelector(".mobileNav");
 var mobileBody = document.querySelector(".mobileBody");
 var mobileDisplay = document.querySelector(".mobileDisplay");
 var mobileColorBar = document.querySelector(".mobileColorBar");
+var mobileLogoPage = document.querySelector(".mobileLogoPage");
+var mobileLogoInner = document.querySelector(".mobileLogoInner");
 var displayingMobile = false;
 
 //logic
@@ -31,6 +33,7 @@ var mobileNavCircle1 = document.querySelector("#mobileNavCircle1"),
     mobileNavCircle3 = document.querySelector("#mobileNavCircle3"),
     mobileNavCircle4 = document.querySelector("#mobileNavCircle4");
 var mobileNavCircleArr = [mobileNavCircle1,mobileNavCircle2,mobileNavCircle3,mobileNavCircle4];
+var mobileNavToggle = false;
 
 //colors
 var currentColor = "#0000ff";

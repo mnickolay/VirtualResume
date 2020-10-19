@@ -1,3 +1,4 @@
+//main desktop
 function resumeLogic(){
     leftHTML.innerHTML = resumeDesign;
     rightHTML.innerHTML = resumeHTML;
@@ -5,27 +6,27 @@ function resumeLogic(){
     logoTextObj.inner.innerHTML = logoTextObj.resume;
     logoTextObj.page.innerText = "Resume";
     setResumeVariables();
-
-    var resTHead = document.querySelector("#resTHead");
-    var resTBody = document.querySelector("#resTBody");
     
-    //skills eventlisteners
     Object.keys(skillsObj).forEach(function(childObj){
         var obj = skillsObj[childObj];
         objAddEventListeners(obj);
     });
 
-    //education eventlisters
     Object.keys(educationObj).forEach(function(childObj){
         var obj = educationObj[childObj];
         objAddEventListeners(obj);
     });
 
-    //work eventlisteners
     Object.keys(workObj).forEach(function(childObj){
         var obj = workObj[childObj];
         objAddEventListeners(obj);
     });
+}
+
+//main mobile
+function mobileResumeLogic(){
+    mobileLogoPage.innerText = "Resume"
+    mobileLogoInner.innerHTML = logoTextObj.resume
 }
 
 function objRemoveActiveClass(){

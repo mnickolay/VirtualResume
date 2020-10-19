@@ -88,3 +88,41 @@ document.onkeydown = function(event){
         else if(event.key === "ArrowUp") findNavSwitch("up")
     }
 }
+
+function addActive(circle){
+    let thisMobile = false;
+    let navNum = 1;
+
+    if(circle.id.includes("mobile")){
+        circle.classList.add("mobileNavActive")
+        thisMobile = true
+    }else circle.classList.add("navActive")
+
+    for(var i=1; i<=4; i++){
+        if(circle.id.includes(i.toString())){
+            navNum = i;
+            break;
+        }
+    }
+
+    if(!thisMobile){
+        mobileNavCircleArr.forEach((nav) => {
+            if(nav.id.includes(navNum.toString()))
+                nav.classList.add("mobileNavActive")
+        })
+    }else{
+        navCircleArr.forEach((nav) => {
+            if(nav.id.includes(navNum.toString()))
+                nav.classList.add("navActive")
+        })
+    }
+}
+
+function removeActive(){
+    navCircleArr.forEach(function(cir){
+        cir.classList.remove("navActive");
+    });
+    mobileNavCircleArr.forEach(function(cir){
+        cir.classList.remove("mobileNavActive");
+    });
+};

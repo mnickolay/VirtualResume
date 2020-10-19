@@ -6,6 +6,7 @@ function desktopStart(){
     navCircle1.classList.add("navActive");
     mobileNavCircle1.classList.add("mobileNavActive");
     homeLogic();
+    mobileHomeLogic();
 }
 
 function pageScrollNavClick(clr, pg, cir){
@@ -18,62 +19,24 @@ function pageScrollNavClick(clr, pg, cir){
     findLogicSwitch();
 }
 
-function addActive(circle){
-    let thisMobile = false;
-    let navNum = 1;
-
-    if(circle.id.includes("mobile")){
-        circle.classList.add("mobileNavActive")
-        thisMobile = true
-    }else circle.classList.add("navActive")
-
-    for(var i=1; i<=4; i++){
-        if(circle.id.includes(i.toString())){
-            navNum = i;
-            break;
-        }
-    }
-
-    if(!thisMobile){
-        mobileNavCircleArr.forEach((nav) => {
-            if(nav.id.includes(navNum.toString()))
-                nav.classList.add("mobileNavActive")
-        })
-    }else{
-        navCircleArr.forEach((nav) => {
-            if(nav.id.includes(navNum.toString()))
-                nav.classList.add("navActive")
-        })
-    }
-}
-
-function removeActive(){
-    navCircleArr.forEach(function(cir){
-        cir.classList.remove("navActive");
-    });
-    mobileNavCircleArr.forEach(function(cir){
-        cir.classList.remove("mobileNavActive");
-    });
-};
-
 function findLogicSwitch() {
-    if(!displayingMobile) resetRLHTML();
+    resetRLHTML();
     switch(page){
         case "home":
-            if(displayingMobile) homeMobileLogic();
-            else homeLogic();
+            mobileHomeLogic();
+            homeLogic();
             break;
         case "resume":
-            if(displayingMobile) resumeMobileLogic();
-            else resumeLogic();
+            mobileResumeLogic();
+            resumeLogic();
             break;
         case "about":
-            if(displayingMobile) aboutMobileLogic();
-            else aboutLogic();
+            mobileAboutLogic();
+            aboutLogic();
             break;
         case "contact":
-            if(displayingMobile) contactMobileLogic();
-            else contactLogic();
+            mobileContactLogic();
+            contactLogic();
             break;
     }
 };

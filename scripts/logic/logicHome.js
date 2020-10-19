@@ -1,3 +1,4 @@
+//main desktop
 function homeLogic(){
     bodyL.innerHTML = homeDesign;
     rightHTML.innerHTML = homeHTML;
@@ -6,5 +7,8 @@ function homeLogic(){
     logoTextObj.page.innerText = "Home";
 }
 
-function homeMobileLogic(){
+//main mobile
+function mobileHomeLogic(){
+    mobileLogoPage.innerText = "Home"
+    mobileLogoInner.innerHTML = logoTextObj.home
 }

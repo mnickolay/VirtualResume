@@ -31,7 +31,18 @@ logoParent.addEventListener("mouseleave", () =>{
     logoTextObj.circle.style.border = "1px solid black";
 })
 
-
+// mobile
+mobileLogoParent.addEventListener('mouseup', () => {
+    if(mobileNavToggle){
+        mobileColorBar.style.height = "9%"
+        mobileColorBar.style.boxShadow = ""
+        mobileNavToggle = false
+    }else{
+        mobileColorBar.style.height = "90%"
+        mobileColorBar.style.boxShadow = "0px -4px 20px 1px #888888"
+        mobileNavToggle = true;
+    } 
+})
 
 function findLogoHeight(){
     let count = 0;

@@ -8,6 +8,17 @@ var blinker;
 var textCharCounter = 0;
 var blinkerVal = 10;
 
+//mobile
+var mobileInputField;
+var mobileInputFieldDetail;
+var mobileTextHide1;
+var mobileTextHide2;
+var mobileBlinker;
+var mobileLinkedinDiv;
+var mobileGithubDiv;
+var mobileEmailDiv;
+var mobilePhoneDiv;
+
 //conditional
 var emptyField = true;
 
@@ -24,23 +35,16 @@ function contactLogic(){
     logoTextObj.inner.innerHTML = logoTextObj.contact;
     logoTextObj.page.innerText = "Contact";
 
-    contactObjArr = setContactObjects();
-
-    inputField = document.querySelector("#inputField");
-    inputFieldDetail = document.querySelector("#inputFieldDetail");
-    textHide1 = document.querySelector("#textHide1");
-    textHide2 = document.querySelector("#textHide2");
-    blinker = document.querySelector("#blinkBar");
-
+    contactObjArr = setContactObjects()
+    setContactElements()
     setBlinkerValues()
 
     //blinker animation
     blinkerInterval =  setInterval(() => {
-        if(blinker.classList.contains("blinkerFade"))
-            blinker.classList.remove("blinkerFade")
-        else
-            blinker.classList.add("blinkerFade")
-    }, 500);
+        blinker.classList.contains("blinkerFade") 
+            ? blinker.classList.remove("blinkerFade")  
+            : blinker.classList.add("blinkerFade")
+    }, 500)
 
     //eventlisteners
     Object.keys(contactObjArr).forEach(function(childObj){
@@ -57,11 +61,36 @@ function mobileContactLogic(){
     mobileBody.innerHTML = mobileContactRight
     mobileLogoPage.innerText = "Contact"
     mobileLogoInner.innerHTML = mobileLogoTextObj.contact
+
+    contactObjArr = setContactObjects()
+    setMobileContactElements()
+
+    mobileBlinkerInterval =  setInterval(() => {
+        mobileBlinker.classList.contains("blinkerFade") 
+            ? mobileBlinker.classList.remove("blinkerFade")  
+            : mobileBlinker.classList.add("blinkerFade")
+    }, 500);
+
+    Object.keys(contactObjArr).forEach(function(childObj){
+        contactObjArr[childObj].mobileEle.addEventListener("mouseup", function(){
+            clearTextIntervals();
+            clearAndSetMobileContactStyle(this)
+            if(contactObjArr[childObj].text != inputField.innerText)
+                contactTypeLogic(contactObjArr[childObj]);
+        })
+    })
 }
 
 function clearTextIntervals(){
     clearInterval(addingLetters);
     clearInterval(removingLetters);
+}
+
+function clearAndSetMobileContactStyle(ele){
+    Object.keys(contactObjArr).forEach(function(childObj){
+        contactObjArr[childObj].mobileEle.classList.remove("mobileActiveContact")
+    })
+    ele.classList.add("mobileActiveContact")
 }
 
 function contactTypeLogic(obj){
@@ -146,24 +175,44 @@ function setBlinkerValues(){
     blinkerVal = 10;
 }
 
+function setContactElements(){
+    inputField = document.querySelector("#inputField");
+    inputFieldDetail = document.querySelector("#inputFieldDetail");
+    textHide1 = document.querySelector("#textHide1");
+    textHide2 = document.querySelector("#textHide2");
+    blinker = document.querySelector("#blinkBar");
+}
+
+function setMobileContactElements(){
+    mobileInputField = document.querySelector("#mobileInputField");
+    mobileInputFieldDetail = document.querySelector("#mobileInputFieldDetail");
+    mobileTextHide1 = document.querySelector("#mobileTextHide1");
+    mobileTextHide2 = document.querySelector("#mobileTextHide2");
+    mobileBlinker = document.querySelector("#mobileBlinkBar");
+}
+
 function setContactObjects(){
     var linkedinObj = {
         ele: linkedinDiv = document.querySelector("#linkedinDiv"),
+        mobileEle: mobileLinkedinDiv = document.querySelector("#mobileLinkedinDiv"),
         text: "LinkedIn",
         fill: "<a target='_blank' rel='noopener noreferrer' href='https://www.linkedin.com/in/matthew-nickolay/'>https://www.linkedin.com/in/matthew-nickolay/</a>"
     };
     var githubObj = {
         ele: githubDiv = document.querySelector("#githubDiv"),
+        mobileEle: mobileGithubDiv = document.querySelector("#mobileGithubDiv"),
         text: "GitHub",
         fill: "<a target='_blank' rel='noopener noreferrer' href='https://github.com/mnickolay'>https://github.com/mnickolay</a>"
     };
     var emailObj = {
         ele: emailDiv = document.querySelector("#emailDiv"),
+        mobileEle: mobileEmailDiv = document.querySelector("#mobileEmailDiv"),
         text: "Email",
         fill: "matthew.c.nickolay@gmail.com"
     };
     var phoneObj = {
         ele: phoneDiv = document.querySelector("#phoneDiv"),
+        mobileEle: mobilePhoneDiv = document.querySelector("#mobilePhoneDiv"),
         text: "Phone",
         fill: "763-242-2246"
     }

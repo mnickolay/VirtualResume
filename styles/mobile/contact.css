@@ -1,0 +1,54 @@
+.mobileContactDiv{
+    margin: 5vw;
+    height: 89vh;
+}
+
+#mobileContactTop{
+    width: 100%;
+    height: 50vh;
+}
+
+#mobileContactBottom{
+    margin: 10vh auto auto auto;
+    width: 100%;
+}
+
+.mobileInnerDiv{
+    margin: 3vh auto auto auto;
+    width: fit-content;
+    display: inline-block;
+}
+
+.mobileContactImg{
+    position: relative;
+    width: 5vh;
+    vertical-align: baseline;
+    background-color: #f0f0f0;
+    border-radius: 50px;
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    animation: imgSlideRight 1s ease,
+                fadeIn 1s ease;
+}
+
+.mobileContactText{
+    display: inline-block;
+    font-size: 3.5vh;
+    vertical-align: middle;
+    padding-left: 2vw;
+}
+
+#mobileLinkedinDiv{
+    float: left;
+}
+
+#mobileGithubDiv{
+    float: right;
+    text-align: right;
+}
+
+#mobilePhoneDiv{
+    float: right;
+    text-align: right;
+}

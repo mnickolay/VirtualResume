@@ -2,12 +2,11 @@
     width: fit-content;
     margin: 6vh auto 1vh auto;
     font-size: 6vh;
-    animation: mobileResSlideDown 1s ease;
 }
 
 #mobileSkills, #mobileEducation, #mobileWork{
     width: fit-content;
-    margin: 0 auto 0 7vw;
+    margin: 0 auto 0 2vw;
     font-size: 4vh;
 }
 
@@ -18,11 +17,11 @@
 .mobileResH5{
     font-size: 2.5vh;
     width: fit-content;
-    margin: 0.75vh auto 0 5vw;
+    margin: 1vh auto 0 5vw;
 }
 
 .mobileResumeDiv{
-    margin-top: 6vh;
+    margin: 6vh 5vw 0 5vw;
     animation: fadeIn 1s ease;
 }
 
@@ -56,9 +55,4 @@
     position: absolute;
     top: 45%;
     right: 1vh;
-}
-
-@keyframes mobileResSlideDown{
-    0% {margin-top: 8vh;}
-    100% {margin-top: 6vh;}
 }

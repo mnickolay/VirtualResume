@@ -10,6 +10,7 @@ function aboutLogic(){
 
 //main mobile
 function mobileAboutLogic(){
+    mobileBody.innerHTML = mobileAboutHTML
     mobileLogoPage.innerText = "About"
     mobileLogoInner.innerHTML = mobileLogoTextObj.about
 }

@@ -54,6 +54,7 @@ function contactLogic(){
 
 //main mobile
 function mobileContactLogic(){
+    mobileBody.innerHTML = mobileContactRight
     mobileLogoPage.innerText = "Contact"
     mobileLogoInner.innerHTML = mobileLogoTextObj.contact
 }

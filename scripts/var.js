@@ -95,13 +95,17 @@ var logoTextObj = {
           "<p>Everything runs off of one HTML page and is updated when a new page is requested upon arrow key press, scroll, or click on the nav.</p>",
     resume: "<p>The resume categories can be hovered over to show details.</p>" +
             "<p>The left side of the page is populated with a JS object based on the hovered element.</p>" +
-            "<p>Each object has an HTML element, a title, and an array of information for the lower table.</p>",
+            "<p>Each object has an HTML element, a title, and an array of information for the lower table.</p>" +
+            "<p></p>",
     about: "<p>The most interesting part of this page is the circles that are populated in the background.</p>" +
            "<p>Every time this page is visited, 7 circle objects are made with random values for their X and Y coordinates and radius.</p>" +
-           "<p>They each follow the mouse at a different rate.</p>",
+           "<p>They each follow the mouse at a different rate.</p>" +
+           "<p>When looking at the code to generate the circles (scripts/circles.js), it may seem strange to make them objects.</p>" +
+           "<p>This was the first part of the project that was somewhat outside of web development, and I wanted to demonstrate OOP understanding</p>",
     contact: "<p>This contact page runs similarily to the resume page with each object having a HTML element, title, and information.</p>" +
              "<p>Hovering over an element will begin an interval to write out the title and push the blinker a set amount.</p>" +
-             "<p>Once typed, the information is show by setting the width of a white bar to 0 and left position of a bar to the text's length over one second.</p>"
+             "<p>Once typed, the information is show by setting the width of a white bar to 0 and left position of a bar to the text's length over one second.</p>" +
+             "<p></p>",
 }
 
 var mobileLogoTextObj = {
@@ -112,9 +116,10 @@ var mobileLogoTextObj = {
           "<p>While the mobile site has some variance to the desktop, the site was built and inteded for desktop use.</p>",
     resume: "<p>The resume categories can be clicked to show details.</p>" +
             "<p>The information is populated with a JS object based on the clicked element.</p>" +
-            "<p>Each object has an HTML element, a title, and an array of information for the lower table.</p>",
-    about: "<p>The desktop version of this site has circles on display that are randomly generated. Go check it out!</p>",
+            "<p>Each object has an HTML element, a title, and an array of information for the lower table.</p>" +
+            "<p>The previous and next arrows use functions that find the current object on display's number, and switch the page information with the previous or next object.</p>",
+    about: "<p>The desktop version of this site has circles on display that are randomly generated with JS. If you can, go check it out!</p>",
     contact: "<p>This contact page runs similarily to the resume page with each object having a HTML element, title, and information.</p>" +
              "<p>Clicking on an element will begin an interval to write out the title and push the blinker a set amount.</p>" +
-             "<p>Once typed, the information is show by setting the width of a white bar to 0 and left position of a bar to the text's length over one second.</p>"
+             "<p>Once typed, the information is show by setting the width of a white bar to 0 with a 1px border on the left.</p>"
 }

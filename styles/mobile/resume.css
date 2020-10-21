@@ -1,7 +1,7 @@
 #mobileResumeHeader{
     width: fit-content;
     margin: 6vh auto 1vh auto;
-    font-size: 6vh;
+    font-size: 36px;
 }
 
 #mobileSkills, #mobileEducation, #mobileWork{
@@ -11,11 +11,11 @@
 
 .mobileResHeader{
     margin: 2vh auto 0 auto;
-    font-size: 28px;
+    font-size: 20px;
 }
 
 .mobileResH5{
-    font-size: 18px;
+    font-size: 14px;
     width: fit-content;
     margin: 1vh auto 0 5vw;
 }
@@ -39,7 +39,6 @@
 
 .mobileDisplayFill{
     margin: 5vh 15vw;
-    
     z-index: 20;
 }
 
@@ -85,6 +84,10 @@
     left: 0;
     height: 40vh;
     width: 7vw;
+}
+
+.mobileDisplayPrev:active, .mobileDisplayNext:active{
+    background-color: #B18500;
 }
 
 .mobileDisplayPrev > i{

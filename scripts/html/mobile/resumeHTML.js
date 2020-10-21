@@ -1,6 +1,3 @@
-const mobileResumeDisplay =
-`<div class="mobileResumeDisplayDiv"></div>`
-
 const mobileResumeBody = 
 `<div class="mobileResumeDiv">
     <div class="mobileResumeInfoDisplay" style="display: none;">

@@ -4,11 +4,6 @@
 }
 
 @font-face{
-    font-family: 'DMSerif';
-    src: url(../fonts/DMSerifText-Regular.ttf);
-}
-
-@font-face{
     font-family: 'Overpass100';
     src: url(../fonts/Overpass-Thin.ttf);
 }

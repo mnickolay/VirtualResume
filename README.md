@@ -1,4 +1,4 @@
-# VirtualResume2
+# VirtualResume
 
 Welcome to my virtual resume.
 

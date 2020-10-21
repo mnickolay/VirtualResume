@@ -61,6 +61,7 @@ var svgCircles;
 var skillsObj;
 var educationObj;
 var workObj;
+var resumeObj;
 var resPageSet = false;
 
 //mobile resume
@@ -73,6 +74,7 @@ var mobileDisplayFillArr;
 var mobileDisplayX;
 var mobileDisplayPrev;
 var mobileDisplayNext;
+var mobileCurrentResumeDisplay;
 
 //contact
 var contactObjArr;

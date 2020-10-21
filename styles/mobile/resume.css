@@ -81,12 +81,26 @@
 
 .mobileDisplayPrev{
     position: absolute;
-    top: 45%;
-    left: 1vh;
+    top: 30%;
+    left: 0;
+    height: 40vh;
+    width: 7vw;
+}
+
+.mobileDisplayPrev > i{
+    margin-top: 20vh;
+    margin-left: 2vw;
 }
 
 .mobileDisplayNext{
     position: absolute;
-    top: 45%;
-    right: 1vh;
+    top: 30%;
+    right: 0;
+    height: 40vh;
+    width: 7vw;
+}
+
+.mobileDisplayNext > i{
+    margin-top: 20vh;
+    margin-left: 2vw;
 }

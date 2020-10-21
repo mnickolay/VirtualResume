@@ -36,8 +36,8 @@
     position: absolute;
     left: 0.37vw;
     top: 0.37vw;
-    width: 4.5vw;
-    height: 4.5vw;
+    width: 4.4vw;
+    height: 4.4vw;
     border-radius: 50px;
     border: 1px solid black;
     transition: all 0.5s ease;
@@ -46,7 +46,7 @@
 .logoMain{
     opacity: 1;
     position: absolute;
-    top: 1.4vw;
+    top: 1.6vw;
     left: 1.15vw;
     transition: 0.3s opacity ease;
 }

@@ -14,15 +14,64 @@ function mobileResumeLogic(){
     })
 
     mobileDisplayPrev.addEventListener("mouseup", () => {
-        alert("prev")
+        mobileFindPreviousResumeObj()
     })
 
     mobileDisplayNext.addEventListener("mouseup", () => {
-        alert("next")
+        mobileFindNextResumeObj()
     })
 
     mobileLogoPage.innerText = "Resume"
     mobileLogoInner.innerHTML = mobileLogoTextObj.resume
+}
+
+function mobileFindPreviousResumeObj(){
+    if(mobileCurrentResumeDisplay.num != 0){
+        Object.keys(resumeObj).forEach((childObj) => {
+            Object.keys(resumeObj[childObj]).forEach(function(innerChildObj){
+                let thisObj = resumeObj[childObj]
+                if(thisObj[innerChildObj].num == mobileCurrentResumeDisplay.num-1){
+                    mobileCurrentResumeDisplay = thisObj[innerChildObj]
+                    mobileObjSettingDisplayFill(mobileCurrentResumeDisplay)
+                }
+            })
+        })
+    }
+}
+
+function mobileFindNextResumeObj(){
+    if(mobileCurrentResumeDisplay.num != 11){
+        let settingNext = true;
+        Object.keys(resumeObj).forEach((childObj) => {
+            Object.keys(resumeObj[childObj]).forEach(function(innerChildObj){
+                let thisObj = resumeObj[childObj]
+                if(settingNext){
+                    if(thisObj[innerChildObj].num == mobileCurrentResumeDisplay.num+1){
+                        mobileCurrentResumeDisplay = thisObj[innerChildObj]
+                        mobileObjSettingDisplayFill(mobileCurrentResumeDisplay)
+                        settingNext = false;
+                    }
+                }
+            })
+        })
+    }
+}
+
+function getObjForEventListeners(){
+    Object.keys(skillsObj).forEach(function(childObj){
+        var obj = skillsObj[childObj]
+        objAddEventListeners(obj)
+    });
+
+    Object.keys(educationObj).forEach(function(childObj){
+        var obj = educationObj[childObj]
+        objAddEventListeners(obj)
+    });
+
+    Object.keys(workObj).forEach(function(childObj){
+        var obj = workObj[childObj]
+        objAddEventListeners(obj)
+    });
 }
 
 function objRemoveActiveClass(obj){
@@ -42,13 +91,13 @@ function objAddEventListeners(obj){
     })
 
     obj.mobileEle.addEventListener("mouseup", () =>{
+        mobileSetResumeInfoDisplay()
         mobileObjSettingDisplayFill(obj)
     })
 }
 
 function mobileObjSettingDisplayFill(obj){
-    mobileSetResumeInfoDisplay()
-
+    mobileCurrentResumeDisplay = obj
     mobileDisplayFillName.innerText = obj.mobileEle.innerText
     if(obj.date) mobileDisplayFillDate.innerText = obj.date
     if(obj.title) mobileDisplayFillTitle.innerText = obj.title
@@ -133,43 +182,30 @@ function setMobileResumeVar(){
     mobileDisplayNext = document.querySelector(".mobileDisplayNext");
 }
 
-function getObjForEventListeners(){
-    Object.keys(skillsObj).forEach(function(childObj){
-        var obj = skillsObj[childObj]
-        objAddEventListeners(obj)
-    });
-
-    Object.keys(educationObj).forEach(function(childObj){
-        var obj = educationObj[childObj]
-        objAddEventListeners(obj)
-    });
-
-    Object.keys(workObj).forEach(function(childObj){
-        var obj = workObj[childObj]
-        objAddEventListeners(obj)
-    });
-}
-
 function setResumeVariables(){
     skillsObj = {
         languageObj: {
+            num: 0,
             ele: document.querySelector(".langHead"),
             mobileEle: document.querySelector("#mobileLanguages"),
             arr: ['C#', 'JavaScript', 'HTML/CSS', 'JSON', 'XML', 'SQL', 'noSQL']
         },
         lafObj: {
+            num: 1,
             ele: document.querySelector(".lafHead"),
             mobileEle: document.querySelector("#mobileLAF"),
             arr: ['.NET Core', 'jQuery', 'MVC', 'ASP.NET', 'React', 'Razor Pages', 'Node.js',
             'Express', 'APIs', 'Bootstrap', 'Entity Framework', 'Dapper ORM', 'NUnit']
         },
         environmentObj: {
+            num: 2,
             ele: document.querySelector(".environmentHead"),
             mobileEle: document.querySelector("#mobileEnvironments"),
             arr: ['Visual Studio', 'Sublime', 'Command Prompt',
             'Git Bash', 'MongoDB', 'SQL Server Management Studio']
         },
         generalObj: {
+            num: 3,
             ele:document.querySelector(".generalHead"),
             mobileEle: document.querySelector("#mobileGeneral"),
             arr: ['Full Stack Developement', 'Object Orientation', 'Generics',
@@ -178,6 +214,7 @@ function setResumeVariables(){
     };
     educationObj = {
         TSG: {
+            num: 4,
             ele: document.querySelector(".SWGHead"),
             mobileEle: document.querySelector("#mobileSWG"),
             date: '01/2020 - 04/2020',
@@ -190,6 +227,7 @@ function setResumeVariables(){
             ]
         },
         WDB: {
+            num: 5,
             ele: document.querySelector(".WDBHead"),
             mobileEle: document.querySelector("#mobileWDB"),
             date: '05/2020 - Current',
@@ -199,6 +237,7 @@ function setResumeVariables(){
             ]
         },
         DCT: {
+            num: 6,
             ele: document.querySelector(".DCTHead"),
             mobileEle: document.querySelector("#mobileDCT"),
             date: '08/2017 - 05/2019',
@@ -209,6 +248,7 @@ function setResumeVariables(){
     };
     workObj = {
         instacart: {
+            num: 7,
             ele: document.querySelector(".instacartHead"),
             mobileEle: document.querySelector("#mobileInstacart"),
             date: '06/2020 - Current',
@@ -219,6 +259,7 @@ function setResumeVariables(){
             ]
         },
         synergy: {
+            num: 8,
             ele: document.querySelector(".synergyHead"),
             mobileEle: document.querySelector("#mobileSynergy"),
             date: '08/2019 - 01/2020',
@@ -230,6 +271,7 @@ function setResumeVariables(){
             ]
         },
         gilbert: {
+            num: 9,
             ele: document.querySelector(".gilbertHead"),
             mobileEle: document.querySelector("#mobileGilbert"),
             date: '05/2019 - 08/2019',
@@ -241,6 +283,7 @@ function setResumeVariables(){
             ]
         },
         mmc: {
+            num: 10,
             ele: document.querySelector(".mmcHead"),
             mobileEle: document.querySelector("#mobileMMC"),
             date: '05/2018 - 08/2018',
@@ -251,6 +294,7 @@ function setResumeVariables(){
             ]
         },
         salut: {
+            num: 11,
             ele: document.querySelector(".salutHead"),
             mobileEle: document.querySelector("#mobileSalut"),
             date: '05/2016 - 11/2019',
@@ -261,5 +305,11 @@ function setResumeVariables(){
                 'Cleaned tables and reset when customers left, and washed dishes when noone was available to do so.'
             ]
         }
+    }
+
+    resumeObj = {
+        skills: skillsObj,
+        education: educationObj,
+        work: workObj
     }
 }

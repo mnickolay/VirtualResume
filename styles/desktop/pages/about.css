@@ -14,7 +14,7 @@
 }
 
 .aboutHeader{
-    margin-top: 50px;
+    margin-top: 60px;
     animation: fadeSlideHead 1s ease;
 }
 
@@ -45,12 +45,16 @@
 
 .aboutBody{
     position: relative;
-    margin-top: 1vw;
+    margin-top: 3vw;
     animation: fadeSlideBody 1s ease;
 }
 
+.aboutBodyDiv{
+    margin-bottom: 1vw;
+}
+
 .aboutBodyPara{
-    font-size: 1.05vw;
+    font-size: 16px;
     font-family: 'Overpass200';
     font-weight: 500;
     text-align: justify;
@@ -75,13 +79,13 @@
 }
 
 @keyframes fadeSlideHead{
-    0% {opacity: 0; margin-top: 30px;}
-    100% {opacity: 1; margin-top: 50px;}
+    0% {opacity: 0; margin-top: 40px;}
+    100% {opacity: 1; margin-top: 60px;}
 }
 
 @keyframes fadeSlideBody{
-    0% {opacity: 0; margin-top: 0.2vw;}
-    100% {opacity: 1; margin-top: 1vw;}
+    0% {opacity: 0; margin-top: 1.5vw;}
+    100% {opacity: 1; margin-top: 3vw;}
 }
 
 @keyframes sideSlide{

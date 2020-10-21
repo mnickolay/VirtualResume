@@ -9,10 +9,9 @@ var textCharCounter = 0;
 var blinkerVal = 10;
 
 //mobile
-var mobileInputField;
+var mobileInputFill;
 var mobileInputFieldDetail;
-var mobileTextHide1;
-var mobileTextHide2;
+var mobileTextHide;
 var mobileBlinker;
 var mobileLinkedinDiv;
 var mobileGithubDiv;
@@ -23,28 +22,41 @@ var mobilePhoneDiv;
 var emptyField = true;
 
 //intervals
+var contactIntervalArr = [];
 var addingLetters;
 var removingLetters;
 var blinkerInterval;
 
 //main desktop
 function contactLogic(){
+    setContactPageStart()
+    contactObjArr = setContactObjects()
+    contactDekstop()
+    contactMobile()
+}
+
+function setContactPageStart(){
     leftHTML.innerHTML = contactLeft;
     rightHTML.innerHTML = contactRight;
     colorBar.style.transform = "skew(9deg)";
     logoTextObj.inner.innerHTML = logoTextObj.contact;
     logoTextObj.page.innerText = "Contact";
 
-    contactObjArr = setContactObjects()
+    mobileBody.innerHTML = mobileContactRight
+    mobileLogoPage.innerText = "Contact"
+    mobileLogoInner.innerHTML = mobileLogoTextObj.contact
+}
+
+function contactDekstop(){
     setContactElements()
     setBlinkerValues()
 
     //blinker animation
-    blinkerInterval =  setInterval(() => {
+    contactIntervalArr.push(blinkerInterval =  setInterval(() => {
         blinker.classList.contains("blinkerFade") 
             ? blinker.classList.remove("blinkerFade")  
             : blinker.classList.add("blinkerFade")
-    }, 500)
+    }, 500))
 
     //eventlisteners
     Object.keys(contactObjArr).forEach(function(childObj){
@@ -56,20 +68,14 @@ function contactLogic(){
     })
 }
 
-//main mobile
-function mobileContactLogic(){
-    mobileBody.innerHTML = mobileContactRight
-    mobileLogoPage.innerText = "Contact"
-    mobileLogoInner.innerHTML = mobileLogoTextObj.contact
-
-    contactObjArr = setContactObjects()
+function contactMobile(){
     setMobileContactElements()
 
-    mobileBlinkerInterval =  setInterval(() => {
+    contactIntervalArr.push(mobileBlinkerInterval =  setInterval(() => {
         mobileBlinker.classList.contains("blinkerFade") 
             ? mobileBlinker.classList.remove("blinkerFade")  
             : mobileBlinker.classList.add("blinkerFade")
-    }, 500);
+    }, 500))
 
     Object.keys(contactObjArr).forEach(function(childObj){
         contactObjArr[childObj].mobileEle.addEventListener("mouseup", function(){
@@ -114,6 +120,8 @@ function writeContactText(obj){
         inputField.innerText += obj.text[textCharCounter];
         blinkerVal += 2.4
         blinker.style.left = blinkerVal + "vw"
+        mobileInputFill.innerText += obj.text[textCharCounter];
+
         textCharCounter++
         
         if(textCharCounter == obj.text.length){
@@ -128,6 +136,7 @@ function removeContactText(obj){
     removingLetters = setInterval(() =>{
         var letterRemCount = inputField.innerText.length;
         inputField.innerText = inputField.innerText.substr(0, inputField.innerText.length-1);
+        mobileInputFill.innerText = mobileInputFill.innerText.substr(0, mobileInputFill.innerText.length-1);
         blinkerVal -= 2.4;
         blinker.style.left = blinkerVal + "vw";
         letterRemCount--;
@@ -147,6 +156,7 @@ function finishRemoval(obj){
 
 function showTextDetail(obj){
     inputFieldDetail.innerHTML = obj.fill;
+    mobileInputFieldDetail.innerHTML = obj.fill;
     width = (inputFieldDetail.clientWidth/window.innerWidth) * 100;
     textShowAnimation(width)
 }
@@ -156,6 +166,9 @@ function textShowAnimation(width){
     textHide1.style.left = (width+10.25) + "vw";
     textHide2.style.left = (width+10.25) + "vw"
     textHide2.style.width = "0vw"
+
+    mobileTextHide.style.width = "0vw"
+    mobileTextHide.style.borderLeft = "1px solid black"
 }
 
 function textHideAnimation(){
@@ -163,6 +176,8 @@ function textHideAnimation(){
     textHide1.style.left = "10vw"
     textHide2.style.left = "10vw"
     textHide2.style.width = "42vw"
+
+    mobileTextHide.style.width = "80vw"
 }
 
 function checkForActive(){
@@ -184,10 +199,9 @@ function setContactElements(){
 }
 
 function setMobileContactElements(){
-    mobileInputField = document.querySelector("#mobileInputField");
+    mobileInputFill = document.querySelector("#mobileInputFill");
     mobileInputFieldDetail = document.querySelector("#mobileInputFieldDetail");
-    mobileTextHide1 = document.querySelector("#mobileTextHide1");
-    mobileTextHide2 = document.querySelector("#mobileTextHide2");
+    mobileTextHide = document.querySelector(".mobileTextHide");
     mobileBlinker = document.querySelector("#mobileBlinkBar");
 }
 
@@ -196,13 +210,13 @@ function setContactObjects(){
         ele: linkedinDiv = document.querySelector("#linkedinDiv"),
         mobileEle: mobileLinkedinDiv = document.querySelector("#mobileLinkedinDiv"),
         text: "LinkedIn",
-        fill: "<a target='_blank' rel='noopener noreferrer' href='https://www.linkedin.com/in/matthew-nickolay/'>https://www.linkedin.com/in/matthew-nickolay/</a>"
+        fill: "<a target='_blank' rel='noopener noreferrer' href='https://www.linkedin.com/in/matthew-nickolay/'>linkedin.com/in/matthew-nickolay/</a>"
     };
     var githubObj = {
         ele: githubDiv = document.querySelector("#githubDiv"),
         mobileEle: mobileGithubDiv = document.querySelector("#mobileGithubDiv"),
         text: "GitHub",
-        fill: "<a target='_blank' rel='noopener noreferrer' href='https://github.com/mnickolay'>https://github.com/mnickolay</a>"
+        fill: "<a target='_blank' rel='noopener noreferrer' href='https://github.com/mnickolay'>github.com/mnickolay</a>"
     };
     var emailObj = {
         ele: emailDiv = document.querySelector("#emailDiv"),

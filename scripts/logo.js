@@ -21,7 +21,7 @@ logoParent.addEventListener("mouseenter", () =>{
 logoParent.addEventListener("mouseleave", () =>{
     logoIntervalArr.map((thisInt) => {
         clearInterval(thisInt)
-        arr = []
+        logoIntervalArr = []
     })
     logoParent.style.backgroundColor = "transparent";
     logoParent.style.borderColor = "transparent";

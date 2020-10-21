@@ -2,10 +2,9 @@ const mobileContactRight =
 `<div class="mobileContactDiv">
     <div id="mobileContactTop">
         <div id="mobileContactHead">Contact</div>
-        <div class="mobileTextHide" id="mobileTextHide2"></div>
-        <div class="mobileTextHide" id="mobileTextHide1"></div>
-        <div id="mobileInputField">Text<span id="mobileBlinkBar">_</span></div>
-        <div id="mobileInputFieldDetail">Text<span id="mobileLengthFinder"></span></div>
+        <div class="mobileTextHide"></div>
+        <div id="mobileInputField"><span id="mobileInputFill"></span><span id="mobileBlinkBar">_</span></div>
+        <div id="mobileInputFieldDetail"></div>
     </div>
     <div id="mobileContactBottom">
         <div id="mobileContactSep1">

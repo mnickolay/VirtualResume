@@ -3,6 +3,17 @@ const mobileResumeDisplay =
 
 const mobileResumeBody = 
 `<div class="mobileResumeDiv">
+    <div class="mobileResumeInfoDisplay" style="display: none;">
+        <div class="mobileDisplayFill">
+            <div id="mobileDisplayFillName"></div>
+            <div id="mobileDisplayFillDate"></div>
+            <div id="mobileDisplayFillTitle"></div>
+            <div id="mobileDisplayFillArr"></div>
+        </div>
+        <div class="mobileDisplayX"><i class="fas fa-times-circle fa-lg"></i></div>
+        <div class="mobileDisplayPrev"><i class="fas fa-angle-left fa-lg"></i></div>
+        <div class="mobileDisplayNext"><i class="fas fa-angle-right fa-lg"></i></div>
+    </div>
     <h1 id="mobileResumeHeader">Resume</h1>
     <div id="mobileSkills">
         <h2 class="mobileResHeader">Skills</h2>

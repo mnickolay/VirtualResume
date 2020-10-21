@@ -61,13 +61,18 @@ var svgCircles;
 var skillsObj;
 var educationObj;
 var workObj;
+var resPageSet = false;
 
 //mobile resume
-var mobileDisplay = document.querySelector(".mobileDisplay");
-var mobileDisplayFill = document.querySelector(".mobileDisplayFill");
-var mobileDisplayX = document.querySelector(".mobileDisplayX");
-var mobileDisplayPrev = document.querySelector(".mobileDisplayPrev");
-var mobileDisplayNext = document.querySelector(".mobileDisplayNext");
+var mobileResumeInfoDisplay;
+var mobileDisplayFill;
+var mobileDisplayFillName;
+var mobileDisplayFillDate;
+var mobileDisplayFillTitle;
+var mobileDisplayFillArr;
+var mobileDisplayX;
+var mobileDisplayPrev;
+var mobileDisplayNext;
 
 //contact
 var contactObjArr;

@@ -6,7 +6,6 @@ function desktopStart(){
     navCircle1.classList.add("navActive");
     mobileNavCircle1.classList.add("mobileNavActive");
     homeLogic();
-    mobileHomeLogic();
 }
 
 function pageScrollNavClick(clr, pg, cir){
@@ -23,19 +22,15 @@ function findLogicSwitch() {
     resetRLHTML();
     switch(page){
         case "home":
-            mobileHomeLogic();
             homeLogic();
             break;
         case "resume":
-            mobileResumeLogic();
             resumeLogic();
             break;
         case "about":
-            mobileAboutLogic();
             aboutLogic();
             break;
         case "contact":
-            mobileContactLogic();
             contactLogic();
             break;
     }
@@ -46,5 +41,9 @@ function resetRLHTML(){
     bodyR.innerHTML = rightHTMLstr;
     rightHTML = document.querySelector(".rightHTML");
     leftHTML = document.querySelector(".leftHTML");
-    clearInterval(blinkerInterval)
+    resPageSet = false
+    contactIntervalArr.map((thisInt) => {
+        clearInterval(thisInt)
+        contactIntervalArr = []
+    })
 }

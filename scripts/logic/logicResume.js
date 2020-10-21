@@ -1,37 +1,16 @@
 //main desktop
 function resumeLogic(){
-    leftHTML.innerHTML = resumeLeft;
-    rightHTML.innerHTML = resumeRight;
-    colorBar.style.transform = "skew(-7deg)";
-    logoTextObj.inner.innerHTML = logoTextObj.resume;
-    logoTextObj.page.innerText = "Resume";
-    setResumeVariables();
-    
-    Object.keys(skillsObj).forEach(function(childObj){
-        var obj = skillsObj[childObj];
-        objAddEventListeners(obj);
-    });
-
-    Object.keys(educationObj).forEach(function(childObj){
-        var obj = educationObj[childObj];
-        objAddEventListeners(obj);
-    });
-
-    Object.keys(workObj).forEach(function(childObj){
-        var obj = workObj[childObj];
-        objAddEventListeners(obj);
-    });
+    setResumePage()
+    setMobileResumeVar()
+    setResumeVariables()
+    getObjForEventListeners()
+    mobileResumeLogic()
 }
 
 //main mobile
 function mobileResumeLogic(){
-    mobileBody.innerHTML = mobileResumeBody
-    document.querySelector(".mobileResumeDiv").addEventListener("mouseup", () =>{
-        mobileDisplay.style.display == "" ? mobileDisplay.style.display = "none" : mobileDisplay.style.display = ""
-    })
-
     mobileDisplayX.addEventListener("mouseup", () => {
-        mobileDisplay.style.display == "" ? mobileDisplay.style.display = "none" : mobileDisplay.style.display = ""
+        mobileSetResumeInfoDisplay()
     })
 
     mobileDisplayPrev.addEventListener("mouseup", () => {
@@ -46,70 +25,153 @@ function mobileResumeLogic(){
     mobileLogoInner.innerHTML = mobileLogoTextObj.resume
 }
 
-function objRemoveActiveClass(){
+function objRemoveActiveClass(obj){
     var resActive = document.querySelector(".resActive");
     if(resActive) resActive.classList.remove("resActive");
+    obj.ele.classList.add("resActive")
 }
 
 function objAddEventListeners(obj){
-    obj.ele.addEventListener("mouseenter", function(){
-        objRemoveActiveClass();
+    obj.ele.addEventListener("mouseenter", () =>{
+        objRemoveActiveClass(obj)
 
-        this.classList.add("resActive");
-        resTHead.innerHTML="";
-        resTBody.innerHTML="";
-        resTHead.innerHTML = objSettingTableHeader(obj);
-        resTBody.innerHTML += objSettingTableFillArr(obj);
-    });
+        resTHead.innerHTML=""
+        resTBody.innerHTML=""
+        resTHead.innerHTML = objSettingTableHeader(obj)
+        resTBody.innerHTML += objSettingTableFillArr(obj)
+    })
+
+    obj.mobileEle.addEventListener("mouseup", () =>{
+        mobileObjSettingDisplayFill(obj)
+    })
+}
+
+function mobileObjSettingDisplayFill(obj){
+    mobileSetResumeInfoDisplay()
+
+    mobileDisplayFillName.innerText = obj.mobileEle.innerText
+    if(obj.date) mobileDisplayFillDate.innerText = obj.date
+    if(obj.title) mobileDisplayFillTitle.innerText = obj.title
+    mobileDisplayFillArr.innerHTML = mobileObjGetFillArrString(obj.arr)
+}
+
+function mobileObjGetFillArrString(arr){
+    let fillArrStr = "<ul id='mobileResumeList'>"
+    arr.forEach((item) =>{
+        fillArrStr += "<li>" + item + "</li>"
+    })
+    fillArrStr += "</ul>"
+    return fillArrStr
+}
+
+function mobileSetResumeInfoDisplay(){
+    if(mobileResumeInfoDisplay.style.display == ""){
+        mobileClearResumeDisplayFill()
+        mobileResumeInfoDisplay.style.opacity = "0"
+        mobileResumeInfoDisplay.style.display = "none"
+    }else{
+        mobileResumeInfoDisplay.style.display = "" 
+        mobileResumeInfoDisplay.style.opacity = "1"
+    }
+}
+
+function mobileClearResumeDisplayFill(){
+    mobileDisplayFillName.innerText = ""
+    mobileDisplayFillDate.innerText = ""
+    mobileDisplayFillTitle.innerText = ""
+    mobileDisplayFillArr.innerHTML = ""
 }
 
 function objSettingTableHeader(obj){
-    var thisTableFill = '<tr><th>' +  obj.ele.innerHTML + '</th>';
+    var thisTableFill = '<tr><th>' +  obj.ele.innerHTML + '</th>'
     if(obj.date != null){
-        thisTableFill += '<th id="thDate">' + obj.date + '</th></tr>';
+        thisTableFill += '<th id="thDate">' + obj.date + '</th></tr>'
     }
     if(obj.title != null){
         thisTableFill += '<tr><th id="thTitle">' + obj.title + '</th><th></th>'
     }
-    thisTableFill += '</tr>';
+    thisTableFill += '</tr>'
     return thisTableFill;
 }
 
 function objSettingTableFillArr(obj){
-    var thisTableFill = "";
+    var thisTableFill = ""
     for(var i=0; i<obj.arr.length; i++){
-        thisTableFill += '<tr><td>';
-        thisTableFill += obj.arr[i] + '</td></tr>';
+        thisTableFill += '<tr><td>'
+        thisTableFill += obj.arr[i] + '</td></tr>'
     }
-    return thisTableFill;
+    return thisTableFill
 }
 
 function objSettingTableFillDate(obj){
-    var thisTableFill = "";
+    var thisTableFill = ""
     if(obj.date != null){
-        thisTableFill += '<tr><td>' + obj.date + '</td></tr>';
+        thisTableFill += '<tr><td>' + obj.date + '</td></tr>'
     }
-    return thisTableFill;
+    return thisTableFill
+}
+
+function setResumePage(){
+    resPageSet = true
+    leftHTML.innerHTML = resumeLeft
+    rightHTML.innerHTML = resumeRight
+    colorBar.style.transform = "skew(-7deg)"
+    logoTextObj.inner.innerHTML = logoTextObj.resume
+    logoTextObj.page.innerText = "Resume"
+    mobileBody.innerHTML = mobileResumeBody
+}
+
+function setMobileResumeVar(){
+    mobileResumeInfoDisplay = document.querySelector(".mobileResumeInfoDisplay");
+    mobileDisplayFill = document.querySelector(".mobileDisplayFill");
+    mobileDisplayFillName = document.querySelector("#mobileDisplayFillName");
+    mobileDisplayFillDate = document.querySelector("#mobileDisplayFillDate");
+    mobileDisplayFillTitle = document.querySelector("#mobileDisplayFillTitle");
+    mobileDisplayFillArr = document.querySelector("#mobileDisplayFillArr");
+    mobileDisplayX = document.querySelector(".mobileDisplayX");
+    mobileDisplayPrev = document.querySelector(".mobileDisplayPrev");
+    mobileDisplayNext = document.querySelector(".mobileDisplayNext");
+}
+
+function getObjForEventListeners(){
+    Object.keys(skillsObj).forEach(function(childObj){
+        var obj = skillsObj[childObj]
+        objAddEventListeners(obj)
+    });
+
+    Object.keys(educationObj).forEach(function(childObj){
+        var obj = educationObj[childObj]
+        objAddEventListeners(obj)
+    });
+
+    Object.keys(workObj).forEach(function(childObj){
+        var obj = workObj[childObj]
+        objAddEventListeners(obj)
+    });
 }
 
 function setResumeVariables(){
     skillsObj = {
         languageObj: {
             ele: document.querySelector(".langHead"),
+            mobileEle: document.querySelector("#mobileLanguages"),
             arr: ['C#', 'JavaScript', 'HTML/CSS', 'JSON', 'XML', 'SQL', 'noSQL']
         },
         lafObj: {
             ele: document.querySelector(".lafHead"),
+            mobileEle: document.querySelector("#mobileLAF"),
             arr: ['.NET Core', 'jQuery', 'MVC', 'ASP.NET', 'React', 'Razor Pages', 'Node.js',
             'Express', 'APIs', 'Bootstrap', 'Entity Framework', 'Dapper ORM', 'NUnit']
         },
         environmentObj: {
             ele: document.querySelector(".environmentHead"),
+            mobileEle: document.querySelector("#mobileEnvironments"),
             arr: ['Visual Studio', 'Sublime', 'Command Prompt',
             'Git Bash', 'MongoDB', 'SQL Server Management Studio']
         },
         generalObj: {
             ele:document.querySelector(".generalHead"),
+            mobileEle: document.querySelector("#mobileGeneral"),
             arr: ['Full Stack Developement', 'Object Orientation', 'Generics',
             'Server Side Validation', 'REST', 'Testing']
         }
@@ -117,6 +179,7 @@ function setResumeVariables(){
     educationObj = {
         TSG: {
             ele: document.querySelector(".SWGHead"),
+            mobileEle: document.querySelector("#mobileSWG"),
             date: '01/2020 - 04/2020',
             arr: [
                 'Intensive and challenging, The Software Guild has students coding 60 hours a week to develop full-stack  programming abilities.',
@@ -128,6 +191,7 @@ function setResumeVariables(){
         },
         WDB: {
             ele: document.querySelector(".WDBHead"),
+            mobileEle: document.querySelector("#mobileWDB"),
             date: '05/2020 - Current',
             arr: [
                 'Currently working through an online course for web development that emphasizes HTML, CSS, JavaScript, jQuery, Bootstrap, and Node.js.',
@@ -136,6 +200,7 @@ function setResumeVariables(){
         },
         DCT: {
             ele: document.querySelector(".DCTHead"),
+            mobileEle: document.querySelector("#mobileDCT"),
             date: '08/2017 - 05/2019',
             arr: [
                 'Received an associates degree in HVAC/R. Emphasis on servicing residential and commercial HVAC equipment.'
@@ -145,6 +210,7 @@ function setResumeVariables(){
     workObj = {
         instacart: {
             ele: document.querySelector(".instacartHead"),
+            mobileEle: document.querySelector("#mobileInstacart"),
             date: '06/2020 - Current',
             title: 'Shopper, Driver',
             arr: [
@@ -154,6 +220,7 @@ function setResumeVariables(){
         },
         synergy: {
             ele: document.querySelector(".synergyHead"),
+            mobileEle: document.querySelector("#mobileSynergy"),
             date: '08/2019 - 01/2020',
             title: 'Delivery Driver',
             arr: [
@@ -164,6 +231,7 @@ function setResumeVariables(){
         },
         gilbert: {
             ele: document.querySelector(".gilbertHead"),
+            mobileEle: document.querySelector("#mobileGilbert"),
             date: '05/2019 - 08/2019',
             title: 'Pre-Apprentice',
             arr: [
@@ -174,6 +242,7 @@ function setResumeVariables(){
         },
         mmc: {
             ele: document.querySelector(".mmcHead"),
+            mobileEle: document.querySelector("#mobileMMC"),
             date: '05/2018 - 08/2018',
             title: 'Pre-Apprentice',
             arr: [
@@ -183,6 +252,7 @@ function setResumeVariables(){
         },
         salut: {
             ele: document.querySelector(".salutHead"),
+            mobileEle: document.querySelector("#mobileSalut"),
             date: '05/2016 - 11/2019',
             title: 'Food Runner, Busser, Dishwasher',
             arr: [
@@ -191,5 +261,5 @@ function setResumeVariables(){
                 'Cleaned tables and reset when customers left, and washed dishes when noone was available to do so.'
             ]
         }
-    };
-};
+    }
+}

@@ -18,23 +18,34 @@
 #mobileInputField{
     margin: 10vh auto 0 auto;
     width: fit-content;
-    font-size: 6vw;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-#mobileInputField{
+    text-align: center;
+    height: 45px;
     font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 #mobileInputFieldDetail{
     margin: 5vh auto 0 auto;
     width: fit-content;
-    font-size: 30px;
+    font-size: 18px;
+    text-align: center;
 }
 
 #mobileBlinkBar{
     position: relative;
+    font-size: 40px;
     top: -0.9vw;
+}
+
+.mobileTextHide{
+    position: absolute;
+    top: 33.5vh;
+    right: 10vw;
+    width: 80vw;
+    height: 4vh;
+    text-align: center;
+    background-color: #f0f0f0;
+    transition: all 1s ease;
 }
 
 .mobileActiveContact{

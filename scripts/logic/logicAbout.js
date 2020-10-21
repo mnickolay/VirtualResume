@@ -6,10 +6,7 @@ function aboutLogic(){
     logoTextObj.inner.innerHTML = logoTextObj.about;
     logoTextObj.page.innerText = "About";
     aboutCircleCreation();
-}
 
-//main mobile
-function mobileAboutLogic(){
     mobileBody.innerHTML = mobileAboutHTML
     mobileLogoPage.innerText = "About"
     mobileLogoInner.innerHTML = mobileLogoTextObj.about
